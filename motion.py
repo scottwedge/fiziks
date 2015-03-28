@@ -5,6 +5,7 @@ from  sympy import *
 delta(x) = v * t
 delta(x) = v1 * t + .5 * a * (t**2)
 v2 = v1 + a * t
+v2**2 = v1**2 + 2 * a * delta(x)
 v = diff(x,t)
 a = diff(v,t)
 v = integrate(a,t)
