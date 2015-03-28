@@ -6,6 +6,8 @@
 #k is k value of spring
 #x is spring compression 
 
+from sympy import *
+
 ke = (0.5) * m * (v**2)
 peGravitational = m * g * h 
 peSpring =  (0.5) * k * (x**2)
