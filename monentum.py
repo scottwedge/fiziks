@@ -1,6 +1,11 @@
 #momentum equations
 
 from sympy import *
+# p = momentum
+# m = mass
+# v = velocity
+# f = force
+# I = Impulse
 
  p = m * v
  I = delta(p)
