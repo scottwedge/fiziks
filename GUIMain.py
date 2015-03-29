@@ -444,32 +444,24 @@ class Showmu2BaseMenu(object):
         self.result.Text = str(mu)
 class showPowerBaseMenu(object):
    def __init__(self):
-        window = Gtk.Window("Title")
-        vbox = Gtk.VBox()
-        entry = Gtk.Entry()
-        entry2 = Gtk.Entry()
-        submit = Gtk.Button("Submit")
-        vbox.PackStart(entry)
-        vbox.PackStart(entry2)
-        vbox.PackStart(submit)
-        window.Add(vbox)
-        window.ShowAll()
-class showCalcWorkBaseMenu(object):
-   def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry = Entry((50,50), 20)
-        self.entry.draw(self.window)
+        self.entry0 = Entry((50,50), 20)
+        self.entry0.draw(self.window)
         self.entry1 = Entry((50,80), 20)
         self.entry1.draw(self.window)
-        self.submit = Button((100,200), "Submit")
+        self.result = Entry((50,110), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'w:').draw(self.window)
+        Text((15, 90),'t:').draw(self.window)
+        self.submit = Button((100,230), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
-   def callMathFunction(self, o, e):
-        f = float(self.entry.Text)
-        m = float(self.entry1.Text)
-        a = f/m
-        self.entry1.Text = str(a)
-class ShowPlanetaryForceMenu(object):
+    def callMathFunction(self, o, e):
+        w = float(self.entry0.Text)
+        t = float(self.entry1.Text)
+        p = diff(w, t)
+        self.result.Text = str(p)
+class showCalcWorkBaseMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
         self.entry0 = Entry((50,50), 20)
@@ -478,16 +470,40 @@ class ShowPlanetaryForceMenu(object):
         self.entry1.draw(self.window)
         self.result = Entry((50,110), 20)
         self.result.draw(self.window)        
-        Text((15, 60),'F:').draw(self.window)
-        Text((15, 90),'M:').draw(self.window)
+        Text((15, 60),'f:').draw(self.window)
+        Text((15, 90),'x:').draw(self.window)
         self.submit = Button((100,230), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
     def callMathFunction(self, o, e):
         f = float(self.entry0.Text)
+        x = float(self.entry1.Text)
+        w = Integrate(forceNet * delta(x), t)
+        self.result.Text = str(w)
+class ShowPlanetaryForceMenu(object):
+   def __init__(self):         
+        self.window = Window("Solve Equation", 400, 300)
+        self.entry0 = Entry((50,50), 20)
+        self.entry0.draw(self.window)
+        self.entry1 = Entry((50,80), 20)
+        self.entry1.draw(self.window)
+        self.entry2 = Entry((50,110),20)
+        self.entry2.draw(self.window)
+        self.result = Entry((50,140), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'m1:').draw(self.window)
+        Text((15, 90),'m2:').draw(self.window)
+        Text((15,120),'r:').draw(self.window)
+        self.submit = Button((100,230), "Submit")
+        self.submit.draw(self.window)
+        self.submit.connect("Click", self.callMathFunction)
+   def callMathFunction(self, o, e):
+        G = 6.67 * 10** -11
+        M = float(self.entry0.Text)
         m = float(self.entry1.Text)
-        a = f/m
-        self.result.Text = str(a)
+        r = float(self.entry2.Text)
+        f = (G * M * m) / (r**2)
+        self.result.Text = str(f)
 class ShowPlanetaryGravityMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
