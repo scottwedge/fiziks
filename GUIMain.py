@@ -443,7 +443,7 @@ class Showmu2BaseMenu(object):
         mu = Ff/m/g/sin(theta)
         self.result.Text = str(mu)
 class showPowerBaseMenu(object):
-   def __init__(self):
+    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
         self.entry0 = Entry((50,50), 20)
         self.entry0.draw(self.window)
@@ -790,18 +790,23 @@ class ShowNewVelocityWithDistanceTravelledMenu(object):
         vbox.PackStart(submit)
         window.Add(vbox)
         window.ShowAll()
+
 class ShowVelocityFromDistanceBaseMenu(object):
-   def __init__(self):
-        window = Gtk.Window("Title")
-        vbox = Gtk.VBox()
-        entry = Gtk.Entry()
-        entry2 = Gtk.Entry()
-        submit = Gtk.Button("Submit")
-        vbox.PackStart(entry)
-        vbox.PackStart(entry2)
-        vbox.PackStart(submit)
-        window.Add(vbox)
-        window.ShowAll()
+   def __init__(self):         
+        self.window = Window("Solve Equation", 400, 300)
+        self.entry0 = Entry((50,50), 20)
+        self.entry0.draw(self.window)
+        self.result = Entry((50,170), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'x:').draw(self.window)
+        self.submit = Button((100,230), "Submit")
+        self.submit.draw(self.window)
+        self.submit.connect("Click", self.callMathFunction)
+   def callMathFunction(self, o, e):
+        X = str(self.entry0.Text)
+        v = diff(X,x)
+        self.result.Text = str(v)
+
 class ShowAccelerationFromVelocityMenu(object):
    def __init__(self):
         window = Gtk.Window("Title")
