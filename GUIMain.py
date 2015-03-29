@@ -294,21 +294,17 @@ class ShowEnergyBaseMenu(object):
 class ShowWorkBaseMenu(object): 
     def __init__(self):          
         #Momentum Menu Buttons 
-        self.work = Button((50, 50), "Work") 
         self.CalcWork = Button((50,70), "Calculus Work") 
         self.power = Button((50,90), "Power") 
  
         self.equationWorkMenu = Window("Solve Work Equation", 400, 300) 
-        self.work.draw(self.equationWorkMenu) 
         self.CalcWork.draw(self.equationWorkMenu) 
         self.power.draw(self.equationWorkMenu) 
  
-        self.work.connect("click", self.showWorkMenu) 
         self.CalcWork.connect("click", self.showCalcWorkBaseMenu) 
         self.power.connect("click", self.showPowerBaseMenu) 
          
-    def showWorkMenu(self, o, e): 
-        workMenu = ShowWorkMenu() 
+
     def showCalcWorkBaseMenu(self, o, e): 
         CalcWorkBaseMenu = showCalcWorkBaseMenu() 
     def showPowerBaseMenu(self,o,e): 
@@ -992,18 +988,7 @@ class ShowSpringPotentialEnergyBaseMenu(object):
         vbox.PackStart(submit)
         window.Add(vbox)
         window.ShowAll()
-class ShowWorkMenu(object):
-   def __init__(self):
-        window = Gtk.Window("Title")
-        vbox = Gtk.VBox()
-        entry = Gtk.Entry()
-        entry2 = Gtk.Entry()
-        submit = Gtk.Button("Submit")
-        vbox.PackStart(entry)
-        vbox.PackStart(entry2)
-        vbox.PackStart(submit)
-        window.Add(vbox)
-        window.ShowAll()
+
 class ShowCenterOfMass(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
@@ -1021,6 +1006,8 @@ class ShowCenterOfMass(object):
         Text((15, 90),'m1:').draw(self.window)
         Text((15, 60),'x2').draw(self.window)
         Text((15, 90),'m2:').draw(self.window)
+        self.result = Entry((50,110), 20)
+        self.result.draw(self.window)        
         self.submit = Button((100,230), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -1030,55 +1017,90 @@ class ShowCenterOfMass(object):
         x2 = float(self.entry2.Text)
         m2 = float(self.entry3.Text)
         cm = (m1*x1 + m2*x2) / (m1 + m2)
-        self.result.Text = str(cm) 
+        self.result.Text = str(cm)
 class ShowAccelerationBaseMenu(object):
    def __init__(self):
-        window = Gtk.Window("Title")
-        vbox = Gtk.VBox()
-        entry = Gtk.Entry()
-        entry2 = Gtk.Entry()
-        submit = Gtk.Button("Submit")
-        vbox.PackStart(entry)
-        vbox.PackStart(entry2)
-        vbox.PackStart(submit)
-        window.Add(vbox)
-        window.ShowAll()
+        self.window = Window("Solve Equation", 400, 300)
+        self.entry0 = Entry((50,50), 20)
+        self.entry0.draw(self.window)
+        self.entry1 = Entry((50,80), 20)
+        self.entry1.draw(self.window)
+        self.result = Entry((50,110), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'r:').draw(self.window)
+        Text((15, 90),'v:').draw(self.window)
+
+        self.submit = Button((100,230), "Submit")
+        self.submit.draw(self.window)
+        self.submit.connect("Click", self.callMathFunction)
+   def callMathFunction(self, o, e):
+        r = float(self.entry0.Text)
+        v = float(self.entry1.Text)
+        a = (v**2)/r 
+        self.result.Text = str(a)
 class ShowVerticalCircleVelocityMenu(object):
    def __init__(self):
-        window = Gtk.Window("Title")
-        vbox = Gtk.VBox()
-        entry = Gtk.Entry()
-        entry2 = Gtk.Entry()
-        submit = Gtk.Button("Submit")
-        vbox.PackStart(entry)
-        vbox.PackStart(entry2)
-        vbox.PackStart(submit)
-        window.Add(vbox)
-        window.ShowAll()
+        self.window = Window("Solve Equation", 400, 300)
+        self.entry0 = Entry((50,50), 20)
+        self.entry0.draw(self.window)
+        
+        self.result = Entry((50,110), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'r:').draw(self.window)
+        self.submit = Button((100,230), "Submit")
+        self.submit.draw(self.window)
+        self.submit.connect("Click", self.callMathFunction)
+   def callMathFunction(self, o, e):
+        r = float(self.entry0.Text)
+        g = 9.81
+        vv = (g * r)**.5
+        self.result.Text = str(vv)
 class ShowHorizontalCircleVelocityBaseMenu(object):
    def __init__(self):
-        window = Gtk.Window("Title")
-        vbox = Gtk.VBox()
-        entry = Gtk.Entry()
-        entry2 = Gtk.Entry()
-        submit = Gtk.Button("Submit")
-        vbox.PackStart(entry)
-        vbox.PackStart(entry2)
-        vbox.PackStart(submit)
-        window.Add(vbox)
-        window.ShowAll()
+        self.window = Window("Solve Equation", 400, 300)
+        self.entry0 = Entry((50,50), 20)
+        self.entry0.draw(self.window)
+        self.entry1 = Entry((50,80), 20)
+        self.entry1.draw(self.window)
+        self.result = Entry((50,110), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'mu:').draw(self.window)
+        Text((15, 90),'r:').draw(self.window)
+        self.submit = Button((100,230), "Submit")
+        self.submit.draw(self.window)
+        self.submit.connect("Click", self.callMathFunction)
+   def callMathFunction(self, o, e):
+        mu = float(self.entry0.Text)
+        r = float(self.entry1.Text)
+        g = 9.81
+        vh = (r * mu * g)**.5
+        self.result.Text = str(vh)
+        
 class ShowForceMenu(object):
    def __init__(self):
-        window = Gtk.Window("Title")
-        vbox = Gtk.VBox()
-        entry = Gtk.Entry()
-        entry2 = Gtk.Entry()
-        submit = Gtk.Button("Submit")
-        vbox.PackStart(entry)
-        vbox.PackStart(entry2)
-        vbox.PackStart(submit)
-        window.Add(vbox)
-        window.ShowAll()
+        self.window = Window("Solve Equation", 400, 300)
+        self.entry0 = Entry((50,50), 20)
+        self.entry0.draw(self.window)
+        self.entry1 = Entry((50,80), 20)
+        self.entry1.draw(self.window)
+        self.entry2 = Entry((50,80), 20)
+        self.entry2.draw(self.window)
+        self.result = Entry((50,110), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'m:').draw(self.window)
+        Text((15, 90),'v:').draw(self.window)
+        Text((15, 90),'r:').draw(self.window)
+        self.submit = Button((100,230), "Submit")
+        self.submit.draw(self.window)
+        self.submit.connect("Click", self.callMathFunction)
+   def callMathFunction(self, o, e):
+        m = float(self.entry0.Text)
+        v = float(self.entry1.Text)
+        r = float(self.entry2.Text)
+        
+        f = (m * (v**2))/r
+        self.result.Text = str(f)
+        
   
 #Base Menu Buttons 
 baseMenu = BaseMenu() 
