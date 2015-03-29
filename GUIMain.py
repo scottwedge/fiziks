@@ -436,14 +436,14 @@ class Showmu2BaseMenu(object):
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
    def callMathFunction(self, o, e):
-        Ff = float(self.entry0.Text)
+        Ff = string(self.entry0.Text)
         m = float(self.entry1.Text)
         g = float(self.entry2.Text)
         theta = float(self.entry3.Text)
         mu = Ff/m/g/sin(theta)
         self.result.Text = str(mu)
 class showPowerBaseMenu(object):
-   def __init__(self):
+    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
         self.entry0 = Entry((50,50), 20)
         self.entry0.draw(self.window)
@@ -453,8 +453,9 @@ class showPowerBaseMenu(object):
         self.submit = Button((100,230), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
-   def callMathFunction(self, o, e):
-        w = float(self.entry0.Text)
+    def callMathFunction(self, o, e):
+        w = str(self.entry0.Text)
+        t = str(self.entry1.Text)
         p = diff(w, t)
         self.result.Text = str(p)
 class showCalcWorkBaseMenu(object):
