@@ -8,6 +8,6 @@
 
 from sympy import *
 
-ke = (0.5) * m * (v**2)
-peGravitational = m * g * h 
-peSpring =  (0.5) * k * (x**2)
+ke = (0.5) * m * (v**2) #kinetic energy
+peGravitational = m * g * h #Gravitational Potential Energy
+peSpring =  (0.5) * k * (x**2) #Spring Potential Energy
