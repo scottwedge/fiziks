@@ -68,9 +68,6 @@ class EquationBaseMenu(object):
     def showCircularMotionBaseMenu(self, o, e):
         forceCircularMotionMenu = ShowCircularMotionBaseMenu()
 
-        
-    
-
 class ShowVariableMenu(object):
     def __init__(self):
         #Equation Base Menu Buttons
@@ -96,53 +93,28 @@ class ShowForceBaseMenu(object):
         self.forceAcceleration = Button((50,170), "Solve for Acceleration")
         self.mu = Button((50,190), "Solve for mu")
         self.mu2 = Button((50,210), "Solve for mu with out normal force")
-       
-<<<<<<< HEAD
-=======
-        self.equationForceMenu = Window("Solve Force Equation", 200, 200)
-        self.forceNet.draw(self.showNetForceBaseMenu)
-        self.forceNormal.draw(self.showNormalForceMenu)
-        self.forceApplied.draw(self.showAppliedForceBaseMenu)
-        self.forceFriction.draw(self.showFrictionForceBaseMenu)
-        self.forcePlanetary.draw(self.showPlanetaryForceBaseMenu)
-        self.forceMass.draw(self.showMassForceBaseMenu)
-        self.forceAcceleration.draw(self.showAccelerationForceBaseMenu)
-        self.mu.draw(self.showmuBaseMenu)
-        self.mu2.draw(self.showmu2BaseMenu)
-
-        def showNetForceBaseMenu(self, o, e):
-            netForceBaseMenu = ShowNetForceBaseMenu()
-        def showNormalForceMenu(self, o, e):
-            showNormalForceMenu = ShowNormalForceMenu()
-        def showAppliedForceBaseMenu(self, o, e):
-            appliedForceBaseMenu = ShowAppliedForceBaseMenu()
-        def showFrictionForceBaseMenu(self, o, e):
-            showFrictionForceMenu = ShowFrictionForceMenu()
-        def showPlanetaryForceBaseMenu(self, o, e):
-            showPlanetaryForceBaseMenu = ShowPlanetaryForceBaseMenu()
-        def showMassForceBaseMenu(self, o , e):
-            showMassForceBaseMenu = ShowMassForceBaseMenu()
-        def showAccelerationForceBaseMenu(self, o , e):
-            showAccelerationForceBaseMenu = ShowAccelerationForceBaseMenu()
-        def showmuBaseMenu(self, o ,e):
-            showmuBaseMenu = ShowmuBaseMenu()
-        def showmu2BaseMenu(self, o ,e):
-            showmu2BaseMenu = Showmu2BaseMenu()
->>>>>>> origin/master
 
         
-        self.equationForceMenu = Window("Solve Force Equation", 200, 200)
+        self.equationForceMenu = Window("Solve Force Equation", 400, 300)
         self.forceNet.draw(self.equationForceMenu)
         self.forceNormal.draw(self.equationForceMenu)
         self.forceApplied.draw(self.equationForceMenu)
         self.forceFriction.draw(self.equationForceMenu)
         self.forcePlanetary.draw(self.equationForceMenu)
+        self.forceMass.draw(self.equationForceMenu)
+        self.forceAcceleration.draw(self.equationForceMenu)
+        self.mu.draw(self.equationForceMenu)
+        self.mu2.draw(self.equationForceMenu)
 
         self.forceNet.connect("click", self.showNetForceBaseMenu)
         self.forceNormal.connect("click", self.showNormalForceBaseMenu)
         self.forceApplied.connect("click", self.showAppliedForceBaseMenu)
         self.forceFriction.connect("click", self.showFrictionForceBaseMenu)
         self.forcePlanetary.connect("click", self.showPlanetaryForceBaseMenu)
+        self.forceMass.connect("click", self.showMassForceBaseMenu)
+        self.forceAcceleration.connect("click", self.showAccelerationForceBaseMenu)
+        self.mu.connect("click", self.showmuBaseMenu)
+        self.mu2.connect("click", self.showmu2BaseMenu)
         
     def showNetForceBaseMenu(self, o, e):
         showNetForceBaseMenu = ShowNetForceBaseMenu()
@@ -154,6 +126,14 @@ class ShowForceBaseMenu(object):
         showFrictionForceBaseMenu = ShowFrictionForceMenu()
     def showPlanetaryForceBaseMenu(self, o, e):
         showPlanetaryForceBaseMenu = ShowPlanetaryForceBaseMenu()
+    def showMassForceBaseMenu(self, o, e):
+        showMassForceBaseMenu = ShowMassForceBaseMenu()
+    def showAccelerationForceBaseMenu(self, o , e):
+        showAccelerationForceBaseMenu = ShowAccelerationForceBaseMenu()
+    def showmuBaseMenu(self, o, e):
+        showmuBaseMenu = ShowmuBaseMenu()
+    def showmu2BaseMenu(self, o, e):
+        showmu2BaseMenu = Showmu2BaseMenu()
 class ShowMomentumBaseMenu(object):
     def __init__(self):
         #Momentum Menu Buttons
@@ -199,7 +179,7 @@ class ShowMomentumBaseMenu(object):
 
 
 class ShowMotionBaseMenu(object):
-<<<<<<< HEAD
+## <<<<<<< HEAD
     def __init__(self):
         #Motion Menu Buttons
         self.distanceTravelled = Button((50, 50), "Distance Travelled")
@@ -216,6 +196,8 @@ class ShowMotionBaseMenu(object):
         self.deltaMotionYVectors = Button((50, 270), "Change in Motion y vectors")
         self.motionXVectors = Button((50, 290), "Motion x vectors")
         self.deltaMotionXVectors = Button((50, 310), "Change in Motion x vectors")
+        self.accelerationNoX = Button((50,330), "Acceleration with out distance")
+        self.accelerationNoV2 = Button((50,350), "Accelerattion with out final velocity")
 
         self.equationMotionMenu = Window("Solve Motion Equation", 400, 400)
         self.distanceTravelled.draw(self.equationMotionMenu)
@@ -232,6 +214,8 @@ class ShowMotionBaseMenu(object):
         self.deltaMotionYVectors.draw(self.equationMotionMenu)
         self.motionXVectors.draw(self.equationMotionMenu)
         self.deltaMotionXVectors.draw(self.equationMotionMenu)
+        self.accelerationNoX.draw(self.equationMotionMenu)
+        self.accelerationNoV2.draw(self.equationMotionMenu)
 
         self.distanceTravelled.connect("click", self.showDistanceTravelledBaseMenu)
         self.distanceTravelledWithAcceleration.connect("click", self.showDistanceTravelledWithAccelerationMenu)
@@ -247,6 +231,8 @@ class ShowMotionBaseMenu(object):
         self.deltaMotionYVectors.connect("click", self.showDeltaMotionYVectorsBaseMenu)
         self.motionXVectors.connect("click", self.showMotionXVectorsBaseMenu)
         self.deltaMotionXVectors.connect("click", self.showDeltaMotionXVectorsBaseMenu)
+        self.accelerationNoX.connect("click", self.showAccelerationNoXBaseMenu)
+        self.accelerationNoV2.connect("click", self.showAccelerationNoV2BaseMenu)
             
     def showDistanceTravelledBaseMenu(self, o, e):
         distanceTravelledBaseMenu = ShowDistanceTravelledBaseMenu()
@@ -276,79 +262,10 @@ class ShowMotionBaseMenu(object):
         motionXVectorsBaseMenu = ShowMotionXVectorsBaseMenu()
     def showDeltaMotionXVectorsBaseMenu(self, o, e):
         deltaMotionXVectorsBaseMenu = ShowDeltaMotionXVectorsBaseMenu()
-=======
-        def __init__(self):
-            #Motion Menu Buttons
-            self.distanceTravelled = Button((50, 50), "Distance Travelled")
-            self.distanceTravelledWithAcceleration = Button((50, 70), "Distance Travelled with Acceleration")
-            self.newVelocityWithTime = Button((50, 90), "New velocity with time")
-            self.newVelocityWithDistanceTravelled = Button((50, 110), "New Velocity with distance travelled")
-            self.velocityFromDistance = Button((50, 130), "Velcotiy from Distance")
-            self.accelerationFromVelocity = Button((50, 150), "Acceleration from Velocity")
-            self.velocityFromAcceleration = Button((50, 170), "Velocity from Acceleration")
-            self.distanceFromVelocity = Button((50, 50), "Distance from Velocity")
-            self.maxRange = Button((50, 70), "Max Range")
-            self.maxHeight = Button((50, 90), "Max Height")
-            self.motionYVectors = Button((50, 110), "Motion y vectors")
-            self.deltaMotionYVectors = Button((50, 130), "Change in Motion y vectors")
-            self.motionXVectors = Button((50, 150), "Motion x vectors")
-            self.deltaMotionXVectors = Button((50, 170), "Change in Motion x vectors")
-            self.accelerationNoX = Button((50,190), "Acceleration with out distance")
-            self.accelerationNoV2 = Button((50,210), "Accelerattion with out final velocity")
-    
-            self.equationMotionMenu = Window("Solve Motion Equation", 400, 300)
-            self.distanceTravelled.draw(self.showDistanceTravelledBaseMenu)
-            self.distanceTravelledWithAcceleration.draw(self.showDistanceTravelledWithAccelerationMenu)
-            self.newVelocityWithTime.draw(self.showNewVelocityWithTimeBaseMenu)
-            self.newVelocityWithDistanceTravelled.draw(self.showNewVelocityWithDistanceTravelledMenu)
-            self.velocityFromDistance.draw(self.showVelocityFromDistanceBaseMenu)
-            self.accelerationFromVelocity.draw(self.showAccelerationFromVelocityMenu)
-            self.velocityFromAcceleration.draw(self.showVelocityFromAccelerationBaseMenu) 
-            self.distanceFromVelocity.draw(showDistanceFromVelocityBaseMenu)
-            self.maxRange.draw(self.showMaxRangeBaseMenu)
-            self.maxHeight.draw(self.showMaxHeightBaseMenu)
-            self.motionYVectors.draw(self.showMotionYVectorsBaseMenu)
-            self.deltaMotionYVectors.draw(self.showDeltaMotionYVectorsBaseMenu)
-            self.motionXVectors.draw(self.showMotionXVectorsBaseMenu)
-            self.deltaMotionXVectors.draw(self.showDeltaMotionXVectorsBaseMenu)
-            self.accelerationNoX.draw(self.showAccelerationNoXBaseMenu)
-            self.accelerationNoV2.draw(self.showAccelerationNoV2BaseMenu)
-            
-            ##To be added after each of the next screens are made
-        def showDistanceTravelledBaseMenu(self, o, e):
-            distanceTravelledBaseMenu = ShowDistanceTravelledBaseMenu()
-        def showDistanceTravelledWithAccelerationMenu(self, o, e):
-            distanceTravelledWithAccelerationMenu = ShowDistanceTravelledWithAccelerationMenu()
-        def showNewVelocityWithTimeBaseMenu(self, o, e):
-            newVelocityWithTimeBaseMenu = ShowNewVelocityWithTimeMomentumBaseMenu()
-        def showNewVelocityWithDistanceTravelledMenu(self, o, e):
-            newVelocityWithDistanceTravelledEnergyMenu = ShowNewVelocityWithDistanceTravelledEnergyMenu()
-        def showVelocityFromDistanceBaseMenu(self, o, e):
-            velocityFromDistanceBaseMenu = ShowVelocityFromDistanceBaseMenu()
-        def showAccelerationFromVelocityMenu(self, o, e):
-            accelerationFromVelocityMenu = ShowAccelerationFromVelocityMenu()
-        def showVelocityFromAccelerationBaseMenu(self, o, e):
-            velocityFromAccelerationMenu = ShowVelocityFromAccelerationBaseMenu()
-        def showDistanceFromVelocityBaseMenu(self, o, e):
-            distanceFromVelocityBaseMenu = ShowDistanceFromVelocityBaseMenu()
-        def showMaxRangeBaseMenu(self, o, e):
-            maxRangeBaseMenu = ShowMaxRangeBaseMenu()
-        def showMaxHeightBaseMenu(self, o, e):
-            maxHeightBaseMenu = ShowMaxHeightBaseMenu()
-        def showMotionYVectorsBaseMenu(self, o, e):
-            motionYVectorsBaseMenu = ShowMotionYVectorsBaseMenu()
-        def showDeltaMotionYVectorsBaseMenu(self, o, e):
-            deltaMotionYVectorsBaseMenu = ShowDeltaMotionYVectorsBaseMenu()
-        def showMotionXVectorsBaseMenu(self, o, e):
-            motionXVectorsBaseMenu = ShowMotionXVectorsBaseMenu()
-        def showDeltaMotionXVectorsBaseMenu(self, o, e):
-            deltaMotionXVectorsBaseMenu = ShowDeltaMotionXVectorsBaseMenu()
-        def showAccelerationNoXBaseMenu(self, o, e):
-            accelertaionNoXBaseMenu = ShowAccelerationNoXBaseMenu()
-        def showAccelerationNoV2BaseMenu(self, o, e):
-            accelerationNoV2BaseMenu = ShowAccelerationNoV2BaseMenu()
->>>>>>> origin/master
-
+    def showAccelerationNoXBaseMenu(self, o, e):
+        accelertaionNoXBaseMenu = ShowAccelerationNoXBaseMenu()
+    def showAccelerationNoV2BaseMenu(self, o, e):
+        accelerationNoV2BaseMenu = ShowAccelerationNoV2BaseMenu()
 
 class ShowEnergyBaseMenu(object):
     def __init__(self):
@@ -379,17 +296,24 @@ class ShowWorkBaseMenu(object):
     def __init__(self):
         #Momentum Menu Buttons
         self.work = Button((50, 50), "Work")
-        self.CalcWork = Button((50,70, "Calculus Work")
-        self.power = Button((50,90, "Power")
+        self.CalcWork = Button((50,70), "Calculus Work")
+        self.power = Button((50,90), "Power")
 
         self.equationWorkMenu = Window("Solve Work Equation", 400, 300)
-<<<<<<< HEAD
         self.work.draw(self.equationWorkMenu)
-        
+        self.CalcWork.draw(self.equationWorkMenu)
+        self.power.draw(self.equationWorkMenu)
+
         self.work.connect("click", self.showWorkMenu)
+        self.CalcWork.connect("click", self.showCalcWorkBaseMenu)
+        self.power.connect("click", self.showPowerBaseMenu)
         
     def showWorkMenu(self, o, e):
         workMenu = ShowWorkMenu()
+    def showCalcWorkBaseMenu(self, o, e):
+        CalcWorkBaseMenu = showCalcWorkBaseMenu()
+    def showPowerBaseMenu(self,o,e):
+        PowerBaseMenu = showPowerBaseMenu()
 class ShowPlanetaryForceBaseMenu(object):
     def __init__(self):
         #Momentum Menu Buttons
@@ -401,19 +325,6 @@ class ShowPlanetaryForceBaseMenu(object):
         self.force.draw(self.equationPlanetaryForceMenu)
         self.gravity.draw(self.equationPlanetaryForceMenu)
         self.keplersConstant.draw(self.equationPlanetaryForceMenu)
-=======
-        self.work.draw(self.showWorkBaseMenu)
-        self.CalcWork.draw(self.showCalcWorkBaseMenu)
-        self.power.draw(self.showPowerBaseMenu)
-        
-        def showWorkBaseMenu(self, o, e):
-            workBaseMenu = ShowWorkBaseMenu()
-        def showCalcWorkBaseMenu(self, o, e):
-            CalcWorkBaseMenu = showCalcWorkBaseMenu()
-        def showPowerBaseMenu(self,o,e):
-            PowerBaseMenu = showPowerBaseMenu()
->>>>>>> origin/master
-
         self.force.connect("click", self.showPlanetaryForce)
         self.gravity.connect("click", self.showPlanetaryGravity)
         self.keplersConstant.connect("click", self.showKeplersConstant)
@@ -466,6 +377,32 @@ class ShowCircularMotionBaseMenu(object):
     def showForceMenu(self, o, e):
         forceMenu = ShowForceMenu()
 
+
+class ShowAccelerationForceBaseMenu(object):
+   def __init__(self):  
+       self.inputWindow = Window("Input Window", 400, 300)
+       self.textBox = input()
+       self.textbox.draw(self.inputWindow)
+class ShowmuBaseMenu(object):
+   def __init__(self):  
+       self.inputWindow = Window("Input Window", 400, 300)
+       self.textBox = input()
+       self.textbox.draw(self.inputWindow)
+class Showmu2BaseMenu(object):
+   def __init__(self):  
+       self.inputWindow = Window("Input Window", 400, 300)
+       self.textBox = input()
+       self.textbox.draw(self.inputWindow)
+class showPowerBaseMenu(object):
+   def __init__(self):  
+       self.inputWindow = Window("Input Window", 400, 300)
+       self.textBox = input()
+       self.textbox.draw(self.inputWindow)
+class showCalcWorkBaseMenu(object):
+   def __init__(self):  
+       self.inputWindow = Window("Input Window", 400, 300)
+       self.textBox = input()
+       self.textbox.draw(self.inputWindow)
 class ShowPlanetaryForceMenu(object):
    def __init__(self):  
        self.inputWindow = Window("Input Window", 400, 300)
