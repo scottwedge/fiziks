@@ -453,10 +453,13 @@ class showPowerBaseMenu(object):
         self.submit = Button((100,230), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
-   def callMathFunction(self, o, e):
-        w = float(self.entry0.Text)
+    def callMathFunction(self, o, e):
+        w = str(self.entry0.Text)
+        t = x
         p = diff(w, t)
         self.result.Text = str(p)
+#****************************************************************
+#************This Does Not Work**********************************
 class showCalcWorkBaseMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
@@ -464,7 +467,11 @@ class showCalcWorkBaseMenu(object):
         self.entry0.draw(self.window)
         self.entry1 = Entry((50,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.entry2 = Entry((50,110), 20)
+        self.entry2.draw(self.window)
+        self.entry3 = Entry((50,140), 20)
+        self.entry3.draw(self.window)
+        self.result = Entry((50,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'f:').draw(self.window)
         Text((15, 90),'x:').draw(self.window)
@@ -472,10 +479,14 @@ class showCalcWorkBaseMenu(object):
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
    def callMathFunction(self, o, e):
-        f = float(self.entry0.Text)
-        x = float(self.entry1.Text)
-        w = Integrate(forceNet * delta(x), t)
+        Fn = str(self.entry0.Text)
+        x = str(self.entry1.Text)
+        a = str(self.entry2.Text)
+        b = str(self.entry3.Text)
+        t = x
+        w = integrate(Fn, (x, a, b))
         self.result.Text = str(w)
+#****************************************************************
 class ShowPlanetaryForceMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
