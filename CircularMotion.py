@@ -1,5 +1,5 @@
  # circular motion
- # a = aceleration
+ # a = acceleration
  # v =  velocity
  # r = radius
  # vv = vertical circle velocity
@@ -8,7 +8,7 @@
  
  from sympy import *
  
- a = (v**2)/r
- vv = (g * r)**.5
- vh = (r * mu * g)**.5
- f = (m * (v**2))/r
+ a = (v**2)/r #acceleration
+ vv = (g * r)**.5 #vertical circle velocity
+ vh = (r * mu * g)**.5 #horizontal Circle Velocity
+ f = (m * (v**2))/r #force
