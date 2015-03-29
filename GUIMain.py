@@ -63,6 +63,7 @@ class EquationBaseMenu(object):
         def showCircularMotionBaseMenu(self, o, e):
             forceCircularMotionMenu = ShowCircularMotionBaseMenu()
 
+
 class ShowVariableMenu(object):
     def __init__(self):
         #Equation Base Menu Buttons
@@ -103,6 +104,7 @@ class ShowForceBaseMenu(object):
         def showPlanetaryForceBaseMenu(self, o, e):
             workPlanetaryForceBaseMenu = ShowPlanetaryForceBaseMenu()
 
+
 class ShowMomentumBaseMenu(object):
    def __init__(self):
         #Momentum Menu Buttons
@@ -136,6 +138,7 @@ class ShowMomentumBaseMenu(object):
             showHitAndSeperateMenu = ShowHitAndSeperateMenu()
         def showHitAndStickBaseMenu(self, o, e):
             HitAndStickMenu = ShowHitAndStickBaseMenu()
+
 
 class ShowMotionBaseMenu(object):
         def __init__(self):
@@ -200,6 +203,7 @@ class ShowMotionBaseMenu(object):
             motionXVectorsBaseMenu = ShowMotionXVectorsBaseMenu()
         def showDeltaMotionXVectorsBaseMenu(self, o, e):
             deltaMotionXVectorsBaseMenu = ShowDeltaMotionXVectorsBaseMenu()
+
 
 class ShowEnergyBaseMenu(object):
    def __init__(self):
@@ -266,5 +270,47 @@ class ShowCircularMotionBaseMenu(object):
         def showForceMenu(self, o, e):
             forceMenu = ShowForceMenu()
   
+  
 #Base Menu Buttons
 baseMenu = BaseMenu()
+## ShowForceBaseMenu
+## ShowMotionMenu
+## ShowMomentumBaseMenu
+## ShowEnergyMenu
+## ShowWorkBaseMenu
+## ShowCenterOfMassMenu
+## ShowCircularMotionBaseMenu
+## ShowNetForceBaseMenu
+## ShowNormalForceMenu
+## ShowAppliedForceBaseMenu
+## ShowFrictionForceMenu
+## ShowPlanetaryForceBaseMenu
+## ShowMomentumBaseMenu
+## ShowImpulseFirstMenu
+## ShowImpulseSecondMenu
+## ShowImpulseThirdMenu
+## ShowConservationOfMomentumBaseMenu
+## ShowHitAndSeperateMenu
+## ShowHitAndStickBaseMenu
+## ShowDistanceTravelledBaseMenu
+## ShowDistanceTravelledWithAccelerationMenu
+## showNewVelocityWithTimeBaseMenu
+## showNewVelocityWithDistanceTravelledMenu
+## showVelocityFromDistanceBaseMenu
+## showAccelerationFromVelocityMenu
+## showVelocityFromAccelerationBaseMenu
+## showDistanceFromVelocityBaseMenu
+## showMaxRangeBaseMenu
+## showMaxHeightBaseMenu
+## showMotionYVectorsBaseMenu
+## showDeltaMotionYVectorsBaseMenu
+## showMotionXVectorsBaseMenu
+## showDeltaMotionXVectorsBaseMenu
+## ShowKineticEnergyBaseMenu
+## ShowGravitationalPotentialEnergyMenu
+## ShowSpringPotentialEnergyBaseMenu
+## ShowWorkBaseMenu
+## ShowCenterOfMassBaseMenu
+## ShowAccelerationBaseMenu
+##   ShowVerticalCircleVelocityMenu
+##   ShowHorizontalCircleVelocityBaseMenu
