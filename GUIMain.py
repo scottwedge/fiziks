@@ -543,18 +543,22 @@ class ShowKeplersConstantMenu(object):
 class ShowNetForceBaseMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry = Entry((50,50), 20)
-        self.entry.draw(self.window)
+        self.entry0 = Entry((50,50), 20)
+        self.entry0.draw(self.window)
         self.entry1 = Entry((50,80), 20)
         self.entry1.draw(self.window)
-        self.submit = Button((100,200), "Submit")
+        self.result = Entry((50,110), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'m:').draw(self.window)
+        Text((15, 90),'a:').draw(self.window)
+        self.submit = Button((100,230), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
    def callMathFunction(self, o, e):
-        f = float(self.entry.Text)
-        m = float(self.entry1.Text)
-        a = f/m
-        self.entry1.Text = str(a)
+        m = float(self.entry0.Text)
+        a = float(self.entry1.Text)
+        fnet = m * a
+        self.result.Text = str(fnet)
 class ShowNormalForceMenu(object):
    def __init__(self):
         window = Gtk.Window("Title")
