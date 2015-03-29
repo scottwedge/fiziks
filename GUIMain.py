@@ -472,18 +472,22 @@ class showCalcWorkBaseMenu(object):
 class ShowPlanetaryForceMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry = Entry((50,50), 20)
-        self.entry.draw(self.window)
+        self.entry0 = Entry((50,50), 20)
+        self.entry0.draw(self.window)
         self.entry1 = Entry((50,80), 20)
         self.entry1.draw(self.window)
-        self.submit = Button((100,200), "Submit")
+        self.result = Entry((50,110), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'F:').draw(self.window)
+        Text((15, 90),'M:').draw(self.window)
+        self.submit = Button((100,230), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
-   def callMathFunction(self, o, e):
-        f = float(self.entry.Text)
+    def callMathFunction(self, o, e):
+        f = float(self.entry0.Text)
         m = float(self.entry1.Text)
         a = f/m
-        self.entry1.Text = str(a)
+        self.result.Text = str(a)
 class ShowPlanetaryGravityMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
