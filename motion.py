@@ -25,3 +25,4 @@ x = integrate(v,t) #Distance from Velocity
    v2x = v1x #Motion x vectors
    delta(x) = v1 * t #Motion x vectors
    
+   triangle = ((x**2) + (y**2))**.5 #Y vector and X vector for hypotenuse
