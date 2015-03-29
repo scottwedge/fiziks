@@ -32,13 +32,13 @@ class EquationBaseMenu(object):
         self.circularMotion = Button((50, 170), "Circular Motion")
         
         self.equationBaseMenu = Window("Solve Equation", 200, 200)
-        self.force.draw(self.equationBaseMenu)
-        self.motion.draw(self.equationBaseMenu)
-        self.momentumButton.draw(self.equationBaseMenu)
-        self.energy.draw(self.equationBaseMenu)
-        self.work.draw(self.equationBaseMenu)
-        self.centerOfMass.draw(self.equationBaseMenu)
-        self.circularMotion.draw(self.equationBaseMenu)
+        self.force.draw(self.showForceBaseMenu)
+        self.motion.draw(self.showMotionMenu)
+        self.momentumButton.draw(self.showMomentumBaseMenu)
+        self.energy.draw(self.showEnergyMenu)
+        self.work.draw(self.showWorkBaseMenu)
+        self.centerOfMass.draw(self.showCenterOfMassMenu)
+        self.circularMotion.draw(self.showCircularMotionBaseMenu)
         
         self.force.connect("click", self.showForceBaseMenu)
         self.motion.connect("click", self.showMotionBaseMenu)
@@ -86,11 +86,11 @@ class ShowForceBaseMenu(object):
         self.forcePlanetary = Button((50, 130), "Planetary Force")
        
         self.equationForceMenu = Window("Solve Force Equation", 200, 200)
-        self.forceNet.draw(self.equationForceMenu)
-        self.forceNormal.draw(self.equationForceMenu)
-        self.forceApplied.draw(self.equationForceMenu)
-        self.forceFriction.draw(self.equationForceMenu)
-        self.forcePlanetary.draw(self.equationForceMenu)
+        self.forceNet.draw(self.showNetForceBaseMenu)
+        self.forceNormal.draw(self.showNormalForceMenu)
+        self.forceApplied.draw(self.showAppliedForceBaseMenu)
+        self.forceFriction.draw(self.showFrictionForceBaseMenu)
+        self.forcePlanetary.draw(self.showPlanetaryForceBaseMenu)
 
         def showNetForceBaseMenu(self, o, e):
             netForceBaseMenu = ShowNetForceBaseMenu()
@@ -115,13 +115,13 @@ class ShowMomentumBaseMenu(object):
         self.hitAndStick = Button((50, 170), "Hit and Stick")
 
         self.equationMomentumMenu = Window("Solve Momentum Equation", 400, 300)
-        self.momentum.draw(self.equationMomentumMenu)
-        self.impulseFirst.draw(self.equationMomentumMenu)
-        self.impulseSecond.draw(self.equationMomentumMenu)
-        self.impulseThird.draw(self.equationMomentumMenu)
-        self.conservationOfMomentum.draw(self.equationMomentumMenu)
-        self.hitAndSeperate.draw(self.equationMomentumMenu)
-        self.hitAndStick.draw(self.equationMomentumMenu)
+        self.momentum.draw(self.showMomentumBaseMenu)
+        self.impulseFirst.draw(self.showImpulseFirstMenu)
+        self.impulseSecond.draw(self.showImpulseSecondBaseMenu)
+        self.impulseThird.draw(self.showImpulseThirdBaseMenu)
+        self.conservationOfMomentum.draw(self.showConservationOfMomentumBaseMenu)
+        self.hitAndSeperate.draw(self.showHitAndSeperateMenu)
+        self.hitAndStick.draw(self.showHitAndStickBaseMenu)
         def showMomentumBaseMenu(self, o, e):
             momentumBaseMenu = ShowMomentumBaseMenu()
         def showImpulseFirstMenu(self, o, e):
@@ -156,20 +156,20 @@ class ShowMotionBaseMenu(object):
             self.deltaMotionXVectors = Button((50, 170), "Change in Motion x vectors")
     
             self.equationMotionMenu = Window("Solve Motion Equation", 400, 300)
-            self.distanceTravelled.draw(self.equationMotionMenu)
-            self.distanceTravelledWithAcceleration.draw(self.equationMotionMenu)
-            self.newVelocityWithTime.draw(self.equationMotionMenu)
-            self.newVelocityWithDistanceTravelled.draw(self.equationMotionMenu)
-            self.velocityFromDistance.draw(self.equationMotionMenu)
-            self.accelerationFromVelocity.draw(self.equationMotionMenu)
-            self.velocityFromAcceleration.draw(self.equationMotionMenu) 
-            self.distanceFromVelocity.draw(self.equationMotionMenu)
-            self.maxRange.draw(self.equationMotionMenu)
-            self.maxHeight.draw(self.equationMotionMenu)
-            self.motionYVectors.draw(self.equationMotionMenu)
-            self.deltaMotionYVectors.draw(self.equationMotionMenu)
-            self.motionXVectors.draw(self.equationMotionMenu)
-            self.deltaMotionXVectors.draw(self.equationMotionMenu)
+            self.distanceTravelled.draw(self.showDistanceTravelledBaseMenu)
+            self.distanceTravelledWithAcceleration.draw(self.showDistanceTravelledWithAccelerationMenu)
+            self.newVelocityWithTime.draw(self.showNewVelocityWithTimeBaseMenu)
+            self.newVelocityWithDistanceTravelled.draw(self.showNewVelocityWithDistanceTravelledMenu)
+            self.velocityFromDistance.draw(self.showVelocityFromDistanceBaseMenu)
+            self.accelerationFromVelocity.draw(self.showAccelerationFromVelocityMenu)
+            self.velocityFromAcceleration.draw(self.showVelocityFromAccelerationBaseMenu) 
+            self.distanceFromVelocity.draw(showDistanceFromVelocityBaseMenu)
+            self.maxRange.draw(self.showMaxRangeBaseMenu)
+            self.maxHeight.draw(self.showMaxHeightBaseMenu)
+            self.motionYVectors.draw(self.showMotionYVectorsBaseMenu)
+            self.deltaMotionYVectors.draw(self.showDeltaMotionYVectorsBaseMenu)
+            self.motionXVectors.draw(self.showMotionXVectorsBaseMenu)
+            self.deltaMotionXVectors.draw(self.showDeltaMotionXVectorsBaseMenu)
             
             ##To be added after each of the next screens are made
         def showDistanceTravelledBaseMenu(self, o, e):
@@ -209,9 +209,9 @@ class ShowEnergyBaseMenu(object):
         self.springPotentialEnergy = Button((50, 90), "Spring Potential Energy")
         
         self.equationEnergyMenu = Window("Solve Energy Equation", 400, 300)
-        self.kineticEnergy.draw(self.equationMomentumMenu)
-        self.gravitationalPotentialEnergy.draw(self.equationMomentumMenu)
-        self.springPotentialEnergy.draw(self.equationMomentumMenu)
+        self.kineticEnergy.draw(self.showKineticEnergyBaseMenu)
+        self.gravitationalPotentialEnergy.draw(self.showGravitationalPotentialEnergyMenu)
+        self.springPotentialEnergy.draw(self.showSpringPotentialEnergyBaseMenu)
         
         ##To be added after each of the next screens are made
         def showKineticEnergyBaseMenu(self, o, e):
@@ -227,7 +227,7 @@ class ShowWorkBaseMenu(object):
         self.work = Button((50, 50), "Work")
 
         self.equationWorkMenu = Window("Solve Work Equation", 400, 300)
-        self.work.draw(self.equationMomentumMenu)
+        self.work.draw(self.showWorkBaseMenu)
         
         def showWorkBaseMenu(self, o, e):
             workBaseMenu = ShowWorkBaseMenu()
@@ -238,7 +238,7 @@ class ShowCenterOfMassBaseMenu(object):
         self.centerOfMass = Button((50, 50), "Center Of Mass")
 
         self.equationMomentumMenu = Window("Solve Center Of Mass Equation", 400, 300)
-        self.centerOfMass.draw(self.equationMomentumMenu)
+        self.centerOfMass.draw(self.showCenterOfMassBaseMenu)
         
         def showCenterOfMassBaseMenu(self, o, e):
             centerOfMassBaseMenu = ShowCenterOfMassBaseMenu()
@@ -252,10 +252,10 @@ class ShowCircularMotionBaseMenu(object):
         self.force = Button((50, 110), "Force")
         
         self.equationCircularMotionMenu = Window("Solve CircularMotion Equation", 400, 300)
-        self.acceleration.draw(self.equationMomentumMenu)
-        self.verticalCircleVelocity.draw(self.equationMomentumMenu)
-        self.horizontalVerticalVelocity.draw(self.equationMomentumMenu)
-        self.force.draw(self.equationMomentumMenu)
+        self.acceleration.draw(self.showAccelerationBaseMenu)
+        self.verticalCircleVelocity.draw(self.showVerticalCircleVelocityMenu)
+        self.horizontalVerticalVelocity.draw(self.showHorizontalCircleVelocityBaseMenu)
+        self.force.draw(self.showForceMenu)
 
         def showAccelerationBaseMenu(self, o, e):
             accelerationBaseMenu = ShowAccelerationBaseMenu()
