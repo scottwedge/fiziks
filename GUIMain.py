@@ -6,20 +6,15 @@ x, y, z = symbols('x y z')
 init_printing(use_unicode=True) 
  
  
-class BaseMenu(object): 
-    def __init__(self):          
-        self.win = Window("Fiziks Mill", 400, 400) 
-        self.solveEquations = Button((150, 150), "Solve Equation") 
-        self.solveVariable = Button((150, 200), "Solve Variable") 
-        self.solveEquations.draw(self.win) 
-        self.solveVariable.draw(self.win) 
-        #Button Connectors 
-        self.solveEquations.connect("click", self.showEquationMenu) 
-        self.solveVariable.connect("click", self.showVariableMenu) 
-    def showEquationMenu(self, o, e): 
-        equationBaseMenu = EquationBaseMenu() 
-    def showVariableMenu(self, o, e): 
-        showVariableMenu = ShowVariableMenu() 
+## class BaseMenu(object): 
+##     def __init__(self):          
+##         self.win = Window("Fiziks Mill", 400, 400) 
+##         self.solveEquations = Button((150, 150), "Solve Equation") 
+##         self.solveEquations.draw(self.win) 
+##         #Button Connectors 
+##         self.solveEquations.connect("click", self.showEquationMenu) 
+##     def showEquationMenu(self, o, e): 
+##         equationBaseMenu = EquationBaseMenu() 
 class EquationBaseMenu(object): 
     def __init__(self):          
         #Equation Base Menu Buttons 
@@ -67,21 +62,8 @@ class EquationBaseMenu(object):
         showCenterOfMassMenu = ShowCenterOfMassBaseMenu() 
     def showCircularMotionBaseMenu(self, o, e): 
         forceCircularMotionMenu = ShowCircularMotionBaseMenu() 
- 
-class ShowVariableMenu(object): 
-    def __init__(self):          
-        #Equation Base Menu Buttons 
-        self.force = Button((50, 50), "Force") 
-        self.motion = Button((50, 70), "Motion") 
-        self.momentumButton = Button((50, 90), "Momentum") 
-        self.energy = Button((50, 110), "Energy") 
-        self.work = Button((50, 130), "Planetary Force") 
-        self.centerOfMass = Button((50, 150), "Center Of Mass") 
-        self.circularMotion = Button((50, 170), "Circular Motion")        
-        #input draw things here 
-        #input connectors here       
-    
- 
+      
+
 class ShowForceBaseMenu(object): 
     def __init__(self):          
         self.forceNet = Button((50, 50), "Net Force") 
@@ -1024,4 +1006,4 @@ class ShowForceMenu(object):
         window.ShowAll()
   
 #Base Menu Buttons 
-baseMenu = BaseMenu() 
+equationBaseMenu = EquationBaseMenu() 
