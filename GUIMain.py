@@ -1,6 +1,6 @@
 from Graphics import *
 from sympy import *
-#import force
+import Gtk
 
 x, y, z = symbols('x y z')
 init_printing(use_unicode=True)
@@ -179,7 +179,6 @@ class ShowMomentumBaseMenu(object):
 
 
 class ShowMotionBaseMenu(object):
-## <<<<<<< HEAD
     def __init__(self):
         #Motion Menu Buttons
         self.distanceTravelled = Button((50, 50), "Distance Travelled")
@@ -379,10 +378,19 @@ class ShowCircularMotionBaseMenu(object):
 
 
 class ShowAccelerationForceBaseMenu(object):
-   def __init__(self):  
-       self.inputWindow = Window("Input Window", 400, 300)
-       self.textBox = input()
-       self.textbox.draw(self.inputWindow)
+    def __init__(self):         
+        window = Gtk.Window("Title")
+        vbox = Gtk.VBox()
+        entry = Gtk.Entry()
+        entry2 = Gtk.Entry()
+        vbox.PackStart(entry)
+        vbox.PackStart(entry2)
+        window.Add(vbox)
+        
+        window.ShowAll()
+        #invoke(lambda obj, event: window.ShowAll())
+       #self.textBox = input()
+       #self.textbox.draw(self.inputWindow)
 class ShowmuBaseMenu(object):
    def __init__(self):  
        self.inputWindow = Window("Input Window", 400, 300)
@@ -438,11 +446,6 @@ class ShowFrictionForceMenu(object):
        self.inputWindow = Window("Input Window", 400, 300)
        self.textBox = input()
        self.textbox.draw(self.inputWindow)
-## class ShowPlanetaryForceBaseMenu(object):
-##    def __init__(self):
-##        self.inputWindow = Window("Input Window", 400, 300)
-##        self.textBox = input()
-##        self.textbox.draw(self.inputWindow)
 class ShowMomentumMenu(object):
    def __init__(self):
        self.inputWindow = Window("Input Window", 400, 300)
