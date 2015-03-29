@@ -274,43 +274,93 @@ class ShowCircularMotionBaseMenu(object):
 #Base Menu Buttons
 baseMenu = BaseMenu()
 class ShowForceBaseMenu(object):
+   def __init__(self):
+        self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowMotionMenu(object):
+   def __init__(self):
+        self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowMomentumBaseMenu(object):
+   def __init__(self):
+    self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowEnergyMenu(object):
+   def __init__(self):
 class ShowWorkBaseMenu(object):
+   def __init__(self):
 class ShowCenterOfMassMenu(object):
+       def __init__(self):
 class ShowCircularMotionBaseMenu(object):
+   def __init__(self):   
 class ShowNetForceBaseMenu(object):
+   def __init__(self):  
 class ShowNormalForceMenu(object):
+   def __init__(self):
 class ShowAppliedForceBaseMenu(object):
+   def __init__(self):
 class ShowFrictionForceMenu(object):
+   def __init__(self):
 class ShowPlanetaryForceBaseMenu(object):
+   def __init__(self):
 class ShowMomentumBaseMenu(object):
+   def __init__(self):
 class ShowImpulseFirstMenu(object):
+   def __init__(self):
 class ShowImpulseSecondMenu(object):
+   def __init__(self):
 class ShowImpulseThirdMenu(object):
+   def __init__(self):
 class ShowConservationOfMomentumBaseMenu(object):
+   def __init__(self):
 class ShowHitAndSeperateMenu(object):
+   def __init__(self):
 class ShowHitAndStickBaseMenu(object):
+   def __init__(self):
 class ShowDistanceTravelledBaseMenu(object):
+   def __init__(self):
 class ShowDistanceTravelledWithAccelerationMenu(object):
+   def __init__(self):
 class showNewVelocityWithTimeBaseMenu(object):
+   def __init__(self):
 class showNewVelocityWithDistanceTravelledMenu(object):
+   def __init__(self):
 class showVelocityFromDistanceBaseMenu(object):
+   def __init__(self):
 class showAccelerationFromVelocityMenu(object):
+   def __init__(self):
 class showVelocityFromAccelerationBaseMenu(object):
+   def __init__(self):
 class showDistanceFromVelocityBaseMenu(object):
+   def __init__(self):
 class showMaxRangeBaseMenu(object):
+   def __init__(self):
 class showMaxHeightBaseMenu(object):
+   def __init__(self):
 class showMotionYVectorsBaseMenu(object):
+   def __init__(self):
 class showDeltaMotionYVectorsBaseMenu(object):
+   def __init__(self):
 class showMotionXVectorsBaseMenu(object):
+   def __init__(self):
 class showDeltaMotionXVectorsBaseMenu(object):
+   def __init__(self):
 class ShowKineticEnergyBaseMenu(object):
+   def __init__(self):
 class ShowGravitationalPotentialEnergyMenu(object):
+   def __init__(self):
 class ShowSpringPotentialEnergyBaseMenu(object):
+   def __init__(self):
 class ShowWorkBaseMenu(object):
+   def __init__(self):
 class ShowCenterOfMassBaseMenu(object):
+   def __init__(self):
 class ShowAccelerationBaseMenu(object):
+   def __init__(self):
 class ShowVerticalCircleVelocityMenu(object):
+   def __init__(self):
 class ShowHorizontalCircleVelocityBaseMenu(object):
+   def __init__(self):
