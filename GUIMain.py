@@ -290,77 +290,192 @@ class ShowMomentumBaseMenu(object):
         textbox.draw(self.inputWindow)
 class ShowEnergyMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowWorkBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowCenterOfMassMenu(object):
        def __init__(self):
+       self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowCircularMotionBaseMenu(object):
    def __init__(self):   
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowNetForceBaseMenu(object):
    def __init__(self):  
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowNormalForceMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowAppliedForceBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowFrictionForceMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowPlanetaryForceBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowMomentumBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowImpulseFirstMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowImpulseSecondMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowImpulseThirdMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowConservationOfMomentumBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowHitAndSeperateMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowHitAndStickBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowDistanceTravelledBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowDistanceTravelledWithAccelerationMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showNewVelocityWithTimeBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showNewVelocityWithDistanceTravelledMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showVelocityFromDistanceBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showAccelerationFromVelocityMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showVelocityFromAccelerationBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showDistanceFromVelocityBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showMaxRangeBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showMaxHeightBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showMotionYVectorsBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showDeltaMotionYVectorsBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showMotionXVectorsBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class showDeltaMotionXVectorsBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowKineticEnergyBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowGravitationalPotentialEnergyMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowSpringPotentialEnergyBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowWorkBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowCenterOfMassBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowAccelerationBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowVerticalCircleVelocityMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+        self.textBox = input()
+        textbox.draw(self.inputWindow)
 class ShowHorizontalCircleVelocityBaseMenu(object):
    def __init__(self):
+   self.inputWindow = Window("Input Window", 400, 300)
+   self.textBox = input()
+   textbox.draw(self.inputWindow)
+
