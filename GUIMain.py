@@ -4,7 +4,7 @@ import ForceOther
  
 x, y, z = symbols('x y z') 
 init_printing(use_unicode=True) 
- 
+firstHeight = 40
  
 ## class BaseMenu(object): 
 ##     def __init__(self):          
@@ -18,14 +18,14 @@ init_printing(use_unicode=True)
 class EquationBaseMenu(object): 
     def __init__(self):          
         #Equation Base Menu Buttons 
-        self.force = Button((50, 50), "Force") 
-        self.motion = Button((50, 70), "Motion") 
-        self.momentumButton = Button((50, 90), "Momentum") 
-        self.energy = Button((50, 110), "Energy") 
-        self.work = Button((50, 130), "Work") 
-        self.planetaryForce = Button((50, 150), "Planetary Force") 
-        self.centerOfMass = Button((50, 170), "Center Of Mass") 
-        self.circularMotion = Button((50, 190), "Circular Motion") 
+        self.force = Button((firstHeight, 50), "Force") 
+        self.motion = Button((firstHeight, 70), "Motion") 
+        self.momentumButton = Button((firstHeight, 90), "Momentum") 
+        self.energy = Button((firstHeight, 110), "Energy") 
+        self.work = Button((firstHeight, 130), "Work") 
+        self.planetaryForce = Button((firstHeight, 150), "Planetary Force") 
+        self.centerOfMass = Button((firstHeight, 170), "Center Of Mass") 
+        self.circularMotion = Button((firstHeight, 190), "Circular Motion") 
          
         self.equationBaseMenu = Window("Solve Equation", 200, 300) 
         self.force.draw(self.equationBaseMenu) 
@@ -66,14 +66,14 @@ class EquationBaseMenu(object):
 
 class ShowForceBaseMenu(object): 
     def __init__(self):          
-        self.forceNet = Button((50, 50), "Net Force") 
-        self.forceNormal = Button((50, 70), "Normal Force") 
-        self.forceApplied = Button((50, 90), "Applied Force") 
-        self.forceFriction = Button((50, 110), "Force of Friction") 
-        self.forcePlanetary = Button((50, 130), "Planetary Force") 
-        self.forceAcceleration = Button((50,170), "Solve for Acceleration") 
-        self.mu = Button((50,190), "Solve for mu") 
-        self.mu2 = Button((50,210), "Solve for mu with out normal force") 
+        self.forceNet = Button((firstHeight, 50), "Net Force") 
+        self.forceNormal = Button((firstHeight, 70), "Normal Force") 
+        self.forceApplied = Button((firstHeight, 90), "Applied Force") 
+        self.forceFriction = Button((firstHeight, 110), "Force of Friction") 
+        self.forcePlanetary = Button((firstHeight, 130), "Planetary Force") 
+        self.forceAcceleration = Button((firstHeight,150), "Solve for Acceleration") 
+        self.mu = Button((firstHeight,170), "Solve for mu") 
+        self.mu2 = Button((firstHeight,190), "Solve for mu without normal force") 
  
          
         self.equationForceMenu = Window("Solve Force Equation", 400, 300) 
@@ -114,13 +114,13 @@ class ShowForceBaseMenu(object):
 class ShowMomentumBaseMenu(object): 
     def __init__(self):          
         #Momentum Menu Buttons 
-        self.momentum = Button((50, 50), "Momentum") 
-        self.impulseFirst = Button((50, 70), "Impulse with Change in Momentum") 
-        self.impulseSecond = Button((50, 90), "Impulse with Force and Change in Time") 
-        self.impulseThird = Button((50, 110), "Impulse with Mass and Change in Velocity") 
-        self.conservationOfMomentum = Button((50, 130), "Conservation Of Momentum") 
-        self.hitAndSeperate = Button((50, 150), "Hit and Seperate") 
-        self.hitAndStick = Button((50, 170), "Hit and Stick") 
+        self.momentum = Button((firstHeight, 50), "Momentum") 
+        self.impulseFirst = Button((firstHeight, 70), "Impulse with Change in Momentum") 
+        self.impulseSecond = Button((firstHeight, 90), "Impulse with Force and Change in Time") 
+        self.impulseThird = Button((firstHeight, 110), "Impulse with Mass and Change in Velocity") 
+        self.conservationOfMomentum = Button((firstHeight, 130), "Conservation Of Momentum") 
+        self.hitAndSeperate = Button((firstHeight, 150), "Hit and Seperate") 
+        self.hitAndStick = Button((firstHeight, 170), "Hit and Stick") 
  
         self.equationMomentumMenu = Window("Solve Momentum Equation", 400, 300) 
         self.momentum.draw(self.equationMomentumMenu) 
@@ -158,22 +158,22 @@ class ShowMomentumBaseMenu(object):
 class ShowMotionBaseMenu(object): 
     def __init__(self):          
         #Motion Menu Buttons 
-        self.distanceTravelled = Button((50, 50), "Distance Travelled") 
-        self.distanceTravelledWithAcceleration = Button((50, 70), "Distance Travelled with Acceleration") 
-        self.newVelocityWithTime = Button((50, 90), "New velocity with time") 
-        self.newVelocityWithDistanceTravelled = Button((50, 110), "New Velocity with distance travelled") 
-        self.velocityFromDistance = Button((50, 130), "Velcotiy from Distance") 
-        self.accelerationFromVelocity = Button((50, 150), "Acceleration from Velocity") 
-        self.velocityFromAcceleration = Button((50, 170), "Velocity from Acceleration") 
-        self.distanceFromVelocity = Button((50, 190), "Distance from Velocity") 
-        self.maxRange = Button((50, 210), "Max Range") 
-        self.maxHeight = Button((50, 230), "Max Height") 
-        self.motionYVectors = Button((50, 250), "Motion y vectors") 
-        self.deltaMotionYVectors = Button((50, 270), "Change in Motion y vectors") 
-        self.motionXVectors = Button((50, 290), "Motion x vectors") 
-        self.deltaMotionXVectors = Button((50, 310), "Change in Motion x vectors") 
-        self.accelerationNoX = Button((50,330), "Acceleration with out distance") 
-        self.accelerationNoV2 = Button((50,350), "Accelerattion with out final velocity") 
+        self.distanceTravelled = Button((firstHeight, 50), "Distance Travelled") 
+        self.distanceTravelledWithAcceleration = Button((firstHeight, 70), "Distance Travelled with Acceleration") 
+        self.newVelocityWithTime = Button((firstHeight, 90), "New velocity with time") 
+        self.newVelocityWithDistanceTravelled = Button((firstHeight, 110), "New Velocity with distance travelled") 
+        self.velocityFromDistance = Button((firstHeight, 130), "Velcotiy from Distance") 
+        self.accelerationFromVelocity = Button((firstHeight, 150), "Acceleration from Velocity") 
+        self.velocityFromAcceleration = Button((firstHeight, 170), "Velocity from Acceleration") 
+        self.distanceFromVelocity = Button((firstHeight, 190), "Distance from Velocity") 
+        self.maxRange = Button((firstHeight, 210), "Max Range") 
+        self.maxHeight = Button((firstHeight, 230), "Max Height") 
+        self.motionYVectors = Button((firstHeight, 250), "Motion y vectors") 
+        self.deltaMotionYVectors = Button((firstHeight, 270), "Change in Motion y vectors") 
+        self.motionXVectors = Button((firstHeight, 290), "Motion x vectors") 
+        self.deltaMotionXVectors = Button((firstHeight, 310), "Change in Motion x vectors") 
+        self.accelerationNoX = Button((firstHeight,330), "Acceleration with out distance") 
+        self.accelerationNoV2 = Button((firstHeight,350), "Accelerattion with out final velocity") 
  
         self.equationMotionMenu = Window("Solve Motion Equation", 400, 400) 
         self.distanceTravelled.draw(self.equationMotionMenu) 
@@ -246,9 +246,9 @@ class ShowMotionBaseMenu(object):
 class ShowEnergyBaseMenu(object): 
     def __init__(self):          
         #Momentum Menu Buttons 
-        self.kineticEnergy = Button((50, 50), "Kinetic Energy") 
-        self.gravitationalPotentialEnergy = Button((50, 70), "Gravitational Potential Energy") 
-        self.springPotentialEnergy = Button((50, 90), "Spring Potential Energy") 
+        self.kineticEnergy = Button((firstHeight, 50), "Kinetic Energy") 
+        self.gravitationalPotentialEnergy = Button((firstHeight, 70), "Gravitational Potential Energy") 
+        self.springPotentialEnergy = Button((firstHeight, 90), "Spring Potential Energy") 
          
         self.equationEnergyMenu = Window("Solve Energy Equation", 400, 300) 
          
@@ -271,8 +271,8 @@ class ShowEnergyBaseMenu(object):
 class ShowWorkBaseMenu(object): 
     def __init__(self):          
         #Momentum Menu Buttons 
-        self.CalcWork = Button((50,70), "Calculus Work") 
-        self.power = Button((50,90), "Power") 
+        self.CalcWork = Button((firstHeight,70), "Calculus Work") 
+        self.power = Button((firstHeight,90), "Power") 
  
         self.equationWorkMenu = Window("Solve Work Equation", 400, 300) 
         self.CalcWork.draw(self.equationWorkMenu) 
@@ -288,9 +288,9 @@ class ShowWorkBaseMenu(object):
 class ShowPlanetaryForceBaseMenu(object): 
     def __init__(self):          
         #Momentum Menu Buttons 
-        self.force = Button((50, 50), "Force") 
-        self.gravity = Button((50, 70), "Gravity") 
-        self.keplersConstant = Button((50, 90), "Keplers Constant") 
+        self.force = Button((firstHeight, 50), "Force") 
+        self.gravity = Button((firstHeight, 70), "Gravity") 
+        self.keplersConstant = Button((firstHeight, 90), "Keplers Constant") 
  
         self.equationPlanetaryForceMenu = Window("Solve Planetary Force Equation", 400, 300) 
         self.force.draw(self.equationPlanetaryForceMenu) 
@@ -309,7 +309,7 @@ class ShowPlanetaryForceBaseMenu(object):
 class ShowCenterOfMassBaseMenu(object): 
     def __init__(self):          
         #Momentum Menu Buttons 
-        self.centerOfMass = Button((50, 50), "Center Of Mass") 
+        self.centerOfMass = Button((firstHeight, 50), "Center Of Mass") 
  
         self.equationMomentumMenu = Window("Solve Center Of Mass Equation", 400, 300) 
         self.centerOfMass.draw(self.equationMomentumMenu) 
@@ -322,10 +322,10 @@ class ShowCenterOfMassBaseMenu(object):
 class ShowCircularMotionBaseMenu(object):
     def __init__(self):
         #Momentum Menu Buttons
-        self.acceleration = Button((50, 50), "Acceleration")
-        self.verticalCircleVelocity = Button((50, 70), "Vertical Circle Velocity")
-        self.horizontalCircleVelocity = Button((50, 90), "Horizontal Circle Velocity")
-        self.force = Button((50, 110), "Force")
+        self.acceleration = Button((firstHeight, 50), "Acceleration")
+        self.verticalCircleVelocity = Button((firstHeight, 70), "Vertical Circle Velocity")
+        self.horizontalCircleVelocity = Button((firstHeight, 90), "Horizontal Circle Velocity")
+        self.force = Button((firstHeight, 110), "Force")
         
         self.equationCircularMotionMenu = Window("Solve CircularMotion Equation", 400, 300)
         
@@ -351,11 +351,11 @@ class ShowCircularMotionBaseMenu(object):
 class ShowAccelerationForceBaseMenu(object):
     def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
         self.entry1 = Entry((50,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'F:').draw(self.window)
         Text((15, 90),'M:').draw(self.window)
@@ -371,11 +371,11 @@ class ShowAccelerationForceBaseMenu(object):
 class ShowmuBaseMenu(object):
     def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'Ff:').draw(self.window)
         Text((15, 90),'Fn:').draw(self.window)
@@ -390,15 +390,15 @@ class ShowmuBaseMenu(object):
 class Showmu2BaseMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.entry2 = Entry((50,110), 20)
+        self.entry2 = Entry((firstHeight,110), 20)
         self.entry2.draw(self.window)
-        self.entry3 = Entry((50,140), 20)
+        self.entry3 = Entry((firstHeight,140), 20)
         self.entry3.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'Ff:').draw(self.window)
         Text((15, 90),'M:').draw(self.window)
@@ -417,9 +417,9 @@ class Showmu2BaseMenu(object):
 class showPowerBaseMenu(object):
     def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'w:').draw(self.window)
         self.submit = Button((100,230), "Submit")
@@ -435,15 +435,15 @@ class showPowerBaseMenu(object):
 class showCalcWorkBaseMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.entry2 = Entry((50,110), 20)
+        self.entry2 = Entry((firstHeight,110), 20)
         self.entry2.draw(self.window)
-        self.entry3 = Entry((50,140), 20)
+        self.entry3 = Entry((firstHeight,140), 20)
         self.entry3.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'f:').draw(self.window)
         Text((15, 90),'x:').draw(self.window)
@@ -462,13 +462,13 @@ class showCalcWorkBaseMenu(object):
 class ShowPlanetaryForceMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.entry2 = Entry((50,110),20)
+        self.entry2 = Entry((firstHeight,110),20)
         self.entry2.draw(self.window)
-        self.result = Entry((50,140), 20)
+        self.result = Entry((firstHeight,140), 20)
         self.result.draw(self.window)        
         Text((15, 60),'m1:').draw(self.window)
         Text((15, 90),'m2:').draw(self.window)
@@ -486,11 +486,11 @@ class ShowPlanetaryForceMenu(object):
 class ShowPlanetaryGravityMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'r:').draw(self.window)
@@ -506,11 +506,11 @@ class ShowPlanetaryGravityMenu(object):
 class ShowKeplersConstantMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'k:').draw(self.window)
         Text((15, 90),'T:').draw(self.window)
@@ -525,11 +525,11 @@ class ShowKeplersConstantMenu(object):
 class ShowNetForceBaseMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
         self.entry1 = Entry((50,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
@@ -544,13 +544,13 @@ class ShowNetForceBaseMenu(object):
 class ShowNormalForceMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.entry2 = Entry((50,110), 20)
+        self.entry2 = Entry((firstHeight,110), 20)
         self.entry2.draw(self.window)
-        self.result = Entry((50,140), 20)
+        self.result = Entry((firstHeight,140), 20)
         self.result.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
@@ -567,11 +567,11 @@ class ShowNormalForceMenu(object):
 class ShowAppliedForceBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
@@ -586,11 +586,11 @@ class ShowAppliedForceBaseMenu(object):
 class ShowFrictionForceMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'mu:').draw(self.window)
         Text((15, 90),'FN:').draw(self.window)
@@ -606,11 +606,11 @@ class ShowFrictionForceMenu(object):
 class ShowMomentumMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
@@ -625,11 +625,11 @@ class ShowMomentumMenu(object):
 class ShowImpulseFirstMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)
         Text((15, 60),'p1:').draw(self.window)
         Text((15, 90),'p2:').draw(self.window)
@@ -644,11 +644,11 @@ class ShowImpulseFirstMenu(object):
 class ShowImpulseSecondMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)
         Text((15, 60),'f:').draw(self.window)
         Text((35, 90),'delta(t):').draw(self.window)
@@ -663,11 +663,11 @@ class ShowImpulseSecondMenu(object):
 class ShowImpulseThirdMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)
         Text((15, 60),'f:').draw(self.window)
         Text((35, 90),'delta(v):').draw(self.window)
@@ -682,9 +682,9 @@ class ShowImpulseThirdMenu(object):
 class ShowConservationOfMomentumBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)
         Text((15, 60),'p2:').draw(self.window)
         self.submit = Button((100,230), "Submit")
@@ -697,15 +697,15 @@ class ShowConservationOfMomentumBaseMenu(object):
 class ShowHitAndSeperateMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.entry2 = Entry((50,110), 20)
+        self.entry2 = Entry((firstHeight,110), 20)
         self.entry2.draw(self.window)
-        self.entry3 = Entry((50,140), 20)
+        self.entry3 = Entry((firstHeight,140), 20)
         self.entry3.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)
         Text((15, 60),'m1:').draw(self.window)
         Text((35, 90),'m2):').draw(self.window)
@@ -724,13 +724,13 @@ class ShowHitAndSeperateMenu(object):
 class ShowHitAndStickBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.entry2 = Entry((50,110), 20)
+        self.entry2 = Entry((firstHeight,110), 20)
         self.entry2.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)
         Text((15, 60),'m1:').draw(self.window)
         Text((35, 90),'m2):').draw(self.window)
@@ -747,11 +747,11 @@ class ShowHitAndStickBaseMenu(object):
 class ShowDistanceTravelledBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)
         Text((15, 60),'v:').draw(self.window)
         Text((35, 90),'t:').draw(self.window)
@@ -766,13 +766,13 @@ class ShowDistanceTravelledBaseMenu(object):
 class ShowDistanceTravelledWithAccelerationMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.entry2 = Entry((50,110), 20)
+        self.entry2 = Entry((firstHeight,110), 20)
         self.entry2.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)
         Text((15, 60),'v1:').draw(self.window)
         Text((35, 90),'t):').draw(self.window)
@@ -789,13 +789,13 @@ class ShowDistanceTravelledWithAccelerationMenu(object):
 class ShowNewVelocityWithTimeBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.entry2 = Entry((50,110), 20)
+        self.entry2 = Entry((firstHeight,110), 20)
         self.entry2.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)
         Text((15, 60),'v1:').draw(self.window)
         Text((35, 90),'t):').draw(self.window)
@@ -813,9 +813,9 @@ class ShowNewVelocityWithTimeBaseMenu(object):
 class ShowVelocityFromDistanceBaseMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'x:').draw(self.window)
         self.submit = Button((100,230), "Submit")
@@ -829,9 +829,9 @@ class ShowVelocityFromDistanceBaseMenu(object):
 class ShowAccelerationFromVelocityMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'v:').draw(self.window)
         self.submit = Button((100,230), "Submit")
@@ -846,13 +846,13 @@ class ShowAccelerationFromVelocityMenu(object):
 class ShowVelocityFromAccelerationBaseMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry2 = Entry((50,80), 20)
+        self.entry2 = Entry((firstHeight,80), 20)
         self.entry2.draw(self.window)
-        self.entry3 = Entry((50,110), 20)
+        self.entry3 = Entry((firstHeight,110), 20)
         self.entry3.draw(self.window)
-        self.result = Entry((50,140), 20)
+        self.result = Entry((firstHeight,140), 20)
         self.result.draw(self.window)        
         Text((15, 60),'A:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
@@ -869,13 +869,13 @@ class ShowVelocityFromAccelerationBaseMenu(object):
 class ShowDistanceFromVelocityBaseMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry2 = Entry((50,80), 20)
+        self.entry2 = Entry((firstHeight,80), 20)
         self.entry2.draw(self.window)
-        self.entry3 = Entry((50,110), 20)
+        self.entry3 = Entry((firstHeight,110), 20)
         self.entry3.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'V:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
@@ -892,11 +892,11 @@ class ShowDistanceFromVelocityBaseMenu(object):
 class ShowMaxRangeBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry2 = Entry((50,80), 20)
+        self.entry2 = Entry((firstHeight,80), 20)
         self.entry2.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'v:').draw(self.window)
         Text((15, 90),'theta:').draw(self.window)
@@ -904,19 +904,19 @@ class ShowMaxRangeBaseMenu(object):
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
    def callMathFunction(self, o, e):
-        v = int(self.entry0.Text)
-        theta = int(self.entry2.Text)
+        v = float(self.entry0.Text)
+        theta = float(self.entry2.Text)
         g = 9.81
         r = ((v**2) * sin(2*theta))/(2*g)
         self.result.Text = str(r)  
 class ShowMaxHeightBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,firstHeight), 20)
         self.entry0.draw(self.window)
         self.entry2 = Entry((50,80), 20)
         self.entry2.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'v:').draw(self.window)
         Text((25, 90),'theta:').draw(self.window)
@@ -924,21 +924,21 @@ class ShowMaxHeightBaseMenu(object):
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
    def callMathFunction(self, o, e):
-        v = int(self.entry0.Text)
-        theta = int(self.entry2.Text)
+        v = float(self.entry0.Text)
+        theta = float(self.entry2.Text)
         g = 9.81
         h = ((v**2) * sin(2*theta))/(2*g)
         self.result.Text = str(h)
 class ShowMotionYVectorsBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry2 = Entry((50,80), 20)
+        self.entry2 = Entry((firstHeight,80), 20)
         self.entry2.draw(self.window)
-        self.entry3 = Entry((50,110), 20)
+        self.entry3 = Entry((firstHeight,110), 20)
         self.entry3.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((25, 60),'v1y:').draw(self.window)
         Text((25, 90),'a:').draw(self.window)
@@ -947,21 +947,21 @@ class ShowMotionYVectorsBaseMenu(object):
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
    def callMathFunction(self, o, e):
-        v1y = int(self.entry0.Text)
-        a = int(self.entry2.Text)
-        t = int(self.entry3.Text)
+        v1y = float(self.entry0.Text)
+        a = float(self.entry2.Text)
+        t = float(self.entry3.Text)
         v2y = v1y + a * t
         self.result.Text = str(v2y)
 class ShowDeltaMotionYVectorsBaseMenu(object):  
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry2 = Entry((50,80), 20)
+        self.entry2 = Entry((firstHeight,80), 20)
         self.entry2.draw(self.window)
-        self.entry3 = Entry((50,110), 20)
+        self.entry3 = Entry((firstHeight,110), 20)
         self.entry3.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((25, 60),'v1:').draw(self.window)
         Text((25, 90),'a:').draw(self.window)
@@ -970,34 +970,42 @@ class ShowDeltaMotionYVectorsBaseMenu(object):
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
    def callMathFunction(self, o, e):
-        v1 = int(self.entry0.Text)
-        a = int(self.entry2.Text)
-        t = int(self.entry3.Text)
+        v1 = float(self.entry0.Text)
+        a = float(self.entry2.Text)
+        t = float(self.entry3.Text)
         deltay = v1 * t + .5 * a * (t**2)
         self.result.Text = str(deltay)
 class ShowMotionXVectorsBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.entry2 = Entry((firstHeight,80), 20)
+        self.entry2.draw(self.window)
+        self.entry3 = Entry((firstHeight,110), 20)
+        self.entry3.draw(self.window)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((25, 60),'v1x:').draw(self.window)
+        Text((25, 90),'a:').draw(self.window)
+        Text((25, 120),'t:').draw(self.window)
         self.submit = Button((100,230), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
    def callMathFunction(self, o, e):
-        v1x = int(self.entry0.Text)
-        v2x = v1x
-        self.result.Text = str(v2x)
+        v1x = float(self.entry0.Text)
+        a = float(self.entry2.Text)
+        t = float(self.entry3.Text)
+        v2x = v1x + a * t
+        self.result.Text = str(v2y)
 class ShowDeltaMotionXVectorsBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry2 = Entry((50,80), 20)
+        self.entry2 = Entry((firstHeight,80), 20)
         self.entry2.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'v1:').draw(self.window)
         Text((25, 90),'t:').draw(self.window)
@@ -1005,19 +1013,18 @@ class ShowDeltaMotionXVectorsBaseMenu(object):
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
    def callMathFunction(self, o, e):
-        v = int(self.entry0.Text)
-        theta = int(self.entry2.Text)
-        g = 9.81
+        v1 = float(self.entry0.Text)
+        t = float(self.entry2.Text)
         deltax = v1 * t
         self.result.Text = str(deltax)
 class ShowKineticEnergyBaseMenu(object):
     def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'v:').draw(self.window)
         Text((25, 90),'m:').draw(self.window)
@@ -1025,18 +1032,18 @@ class ShowKineticEnergyBaseMenu(object):
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
     def callMathFunction(self, o, e):
-        v = int(self.entry0.Text)
-        m = int(self.entry1.Text)
+        v = float(self.entry0.Text)
+        m = float(self.entry1.Text)
         ke = .5 * m * v**2
         self.result.Text = str(ke)
 class ShowGravitationalPotentialEnergyMenu(object):
     def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
         Text((25, 90),'h:').draw(self.window)
@@ -1044,19 +1051,19 @@ class ShowGravitationalPotentialEnergyMenu(object):
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
     def callMathFunction(self, o, e):
-        v = int(self.entry0.Text)
-        theta = int(self.entry2.Text)
+        m = float(self.entry0.Text)
+        h = float(self.entry1.Text)
         g = 9.81
         gpe = m * g * h
         self.result.Text = str(gpe)
 class ShowSpringPotentialEnergyBaseMenu(object):
     def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry2 = Entry((50,80), 20)
+        self.entry2 = Entry((firstHeight,80), 20)
         self.entry2.draw(self.window)
-        self.result = Entry((50,170), 20)
+        self.result = Entry((firstHeight,170), 20)
         self.result.draw(self.window)        
         Text((15, 60),'k:').draw(self.window)
         Text((25, 90),'x:').draw(self.window)
@@ -1064,19 +1071,18 @@ class ShowSpringPotentialEnergyBaseMenu(object):
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
     def callMathFunction(self, o, e):
-        v = int(self.entry0.Text)
-        theta = int(self.entry2.Text)
-        g = 9.81
+        k = float(self.entry0.Text)
+        x = float(self.entry2.Text)
         spe = (0.5) * k * x**2
         self.result.Text = str(spe)
 class ShowCenterOfMass(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'r:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
@@ -1091,11 +1097,11 @@ class ShowCenterOfMass(object):
 class ShowAccelerationBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'r:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
@@ -1110,9 +1116,9 @@ class ShowAccelerationBaseMenu(object):
 class ShowVerticalCircleVelocityMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'r:').draw(self.window)
         self.submit = Button((100,230), "Submit")
@@ -1126,11 +1132,11 @@ class ShowVerticalCircleVelocityMenu(object):
 class ShowHorizontalCircleVelocityBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'mu:').draw(self.window)
         Text((15, 90),'r:').draw(self.window)
@@ -1147,13 +1153,13 @@ class ShowHorizontalCircleVelocityBaseMenu(object):
 class ShowForceMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 300)
-        self.entry0 = Entry((50,50), 20)
+        self.entry0 = Entry((firstHeight,50), 20)
         self.entry0.draw(self.window)
-        self.entry1 = Entry((50,80), 20)
+        self.entry1 = Entry((firstHeight,80), 20)
         self.entry1.draw(self.window)
-        self.entry2 = Entry((50,80), 20)
+        self.entry2 = Entry((firstHeight,80), 20)
         self.entry2.draw(self.window)
-        self.result = Entry((50,110), 20)
+        self.result = Entry((firstHeight,110), 20)
         self.result.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
