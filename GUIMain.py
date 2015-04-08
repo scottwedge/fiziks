@@ -369,7 +369,6 @@ class ShowAccelerationForceBaseMenu(object):
         m = float(self.entry1.Text)
         a = f/m
         self.result.Text = str(a)
-        
 class ShowmuBaseMenu(object):
     def __init__(self):         
         self.window = Window("Solve Equation", 400, 190)
@@ -380,7 +379,9 @@ class ShowmuBaseMenu(object):
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
         Text((15, 60),'Ff:').draw(self.window)
+        self.entry0.Text = 'Force of Friction'
         Text((15, 90),'Fn:').draw(self.window)
+        self.entry1.Text = 'Normal Force'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -403,9 +404,13 @@ class Showmu2BaseMenu(object):
         self.result = Entry((firstHeight,210), 20)
         self.result.draw(self.window)        
         Text((15, 60),'Ff:').draw(self.window)
+        self.entry0.Text = 'Force of Friction'
         Text((15, 90),'M:').draw(self.window)
+        self.entry1.Text = 'Mass'
         Text((15, 120),'G:').draw(self.window)
+        self.entry2.Text = '9.81'
         Text((15, 150),'Theta:').draw(self.window)
+        self.entry3.Text = 'Theta'
         self.submit = Button((firstHeight,170), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -424,6 +429,7 @@ class showPowerBaseMenu(object):
         self.result = Entry((firstHeight,120), 20)
         self.result.draw(self.window)        
         Text((15, 60),'w:').draw(self.window)
+        self.entry0.Text = 'w'
         self.submit = Button((firstHeight,80), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -449,6 +455,10 @@ class showCalcWorkBaseMenu(object):
         self.result.draw(self.window)        
         Text((15, 60),'f:').draw(self.window)
         Text((15, 90),'x:').draw(self.window)
+        self.entry0.Text = 'Function'
+        self.entry1.Text = 'x'
+        self.entry2.Text = 'A'
+        self.entry3.Text = 'B'
         self.submit = Button((firstHeight,170), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -475,6 +485,9 @@ class ShowPlanetaryForceMenu(object):
         Text((15, 60),'m1:').draw(self.window)
         Text((15, 90),'m2:').draw(self.window)
         Text((15,120),'r:').draw(self.window)
+        self.entry0.Text = 'Mass One'
+        self.entry1.Text = 'Mass Two'
+        self.entry2.Text = 'Radius'
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -496,6 +509,8 @@ class ShowPlanetaryGravityMenu(object):
         self.result.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'r:').draw(self.window)
+        self.entry0.Text = 'Mass'
+        self.entry1.Text = 'Radius'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -516,6 +531,8 @@ class ShowKeplersConstantMenu(object):
         self.result.draw(self.window)        
         Text((15, 60),'k:').draw(self.window)
         Text((15, 90),'T:').draw(self.window)
+        self.entry0.Text = 'K'
+        self.entry1.Text = 'T'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -535,6 +552,8 @@ class ShowNetForceBaseMenu(object):
         self.result.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
+        self.entry0.Text = 'Mass'
+        self.entry1.Text = 'Acceleration'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -557,6 +576,9 @@ class ShowNormalForceMenu(object):
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
         Text((15,120),'theta').draw(self.window)
+        self.entry0.Text = 'Mass'
+        self.entry1.Text = 'Acceleration'
+        self.entry2.Text = 'Theta'
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -577,6 +599,8 @@ class ShowAppliedForceBaseMenu(object):
         self.result.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
+        self.entry0.Text = 'Mass'
+        self.entry1.Text = 'Acceleration'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -596,6 +620,8 @@ class ShowFrictionForceMenu(object):
         self.result.draw(self.window)        
         Text((15, 60),'mu:').draw(self.window)
         Text((15, 90),'FN:').draw(self.window)
+        self.entry0.Text = 'Mu'
+        self.entry1.Text = 'Normal Force'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -616,6 +642,8 @@ class ShowMomentumMenu(object):
         self.result.draw(self.window)
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
+        self.entry0.Text = 'Mass'
+        self.entry1.Text = 'Velocity'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -635,6 +663,8 @@ class ShowImpulseFirstMenu(object):
         self.result.draw(self.window)
         Text((15, 60),'p1:').draw(self.window)
         Text((15, 90),'p2:').draw(self.window)
+        self.entry0.Text = 'Momentum One'
+        self.entry1.Text = 'Momentum Two'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -653,7 +683,9 @@ class ShowImpulseSecondMenu(object):
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)
         Text((15, 60),'f:').draw(self.window)
-        Text((35, 90),'delta(t):').draw(self.window)
+        Text((15, 90),'delta(t):').draw(self.window)
+        self.entry0.Text = 'Force'
+        self.entry1.Text = 'Change in Time'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -672,7 +704,9 @@ class ShowImpulseThirdMenu(object):
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)
         Text((15, 60),'f:').draw(self.window)
-        Text((35, 90),'delta(v):').draw(self.window)
+        Text((15, 90),'delta(v):').draw(self.window)
+        self.entry0.Text = 'Force'
+        self.entry1.Text = 'Change in Velocity'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -681,6 +715,9 @@ class ShowImpulseThirdMenu(object):
         v = float(self.entry1.Text)
         I = m * (v)
         self.result.Text = str(I)
+#************* Why The Hell Do We Have Conservation Of Momentum????? X = X. *******************************************
+#*******************************************
+#*******************************************
 class ShowConservationOfMomentumBaseMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 160)
@@ -689,6 +726,7 @@ class ShowConservationOfMomentumBaseMenu(object):
         self.result = Entry((firstHeight,120), 20)
         self.result.draw(self.window)
         Text((15, 60),'p2:').draw(self.window)
+        self.entry0.Text = 'Momentum'
         self.submit = Button((firstHeight,80), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -696,6 +734,8 @@ class ShowConservationOfMomentumBaseMenu(object):
         p2 = float(self.entry0.Text)
         p1 = p2
         self.result.Text = str(p1)
+#*******************************************
+#*******************************************
 class ShowHitAndSeperateMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 250)
@@ -710,9 +750,13 @@ class ShowHitAndSeperateMenu(object):
         self.result = Entry((firstHeight,210), 20)
         self.result.draw(self.window)
         Text((15, 60),'m1:').draw(self.window)
-        Text((35, 90),'m2):').draw(self.window)
+        Text((15, 90),'m2):').draw(self.window)
         Text((15, 110),'v3:').draw(self.window)
-        Text((35, 140),'v4:').draw(self.window)
+        Text((15, 140),'v4:').draw(self.window)
+        self.entry0.Text = 'Mass One'
+        self.entry1.Text = 'Mass Two'
+        self.entry2.Text = 'Velocity One'
+        self.entry3.Text = 'Velocity Two'
         self.submit = Button((firstHeight,170), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -735,8 +779,11 @@ class ShowHitAndStickBaseMenu(object):
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)
         Text((15, 60),'m1:').draw(self.window)
-        Text((35, 90),'m2):').draw(self.window)
+        Text((15, 90),'m2):').draw(self.window)
         Text((15, 110),'v1:').draw(self.window)
+        self.entry0.Text = 'Mass One'
+        self.entry1.Text = 'Mass Two'
+        self.entry2.Text = 'Velocity'
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -756,7 +803,9 @@ class ShowDistanceTravelledBaseMenu(object):
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)
         Text((15, 60),'v:').draw(self.window)
-        Text((35, 90),'t:').draw(self.window)
+        Text((15, 90),'t:').draw(self.window)
+        self.entry0.Text = 'Velocity'
+        self.entry1.Text = 'Time'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -777,8 +826,11 @@ class ShowDistanceTravelledWithAccelerationMenu(object):
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)
         Text((15, 60),'v1:').draw(self.window)
-        Text((35, 90),'t:').draw(self.window)
+        Text((15, 90),'t:').draw(self.window)
         Text((15, 110),'a:').draw(self.window)
+        self.entry0.Text = 'Velocity'
+        self.entry1.Text = 'Time'
+        self.entry2.Text = 'Acceleration'
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -800,8 +852,11 @@ class ShowNewVelocityWithTimeBaseMenu(object):
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)
         Text((15, 60),'v1:').draw(self.window)
-        Text((35, 90),'t:').draw(self.window)
+        Text((15, 90),'t:').draw(self.window)
         Text((15, 110),'a:').draw(self.window)
+        self.entry0.Text = 'Velocity'
+        self.entry1.Text = 'Time'
+        self.entry2.Text = 'Acceleration'
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -820,6 +875,7 @@ class ShowVelocityFromDistanceBaseMenu(object):
         self.result = Entry((firstHeight,120), 20)
         self.result.draw(self.window)        
         Text((15, 60),'x:').draw(self.window)
+        self.entry0.Text = 'Fuction Of X'
         self.submit = Button((firstHeight,80), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -836,6 +892,7 @@ class ShowAccelerationFromVelocityMenu(object):
         self.result = Entry((firstHeight,120), 20)
         self.result.draw(self.window)        
         Text((15, 60),'v:').draw(self.window)
+        self.entry0.Text = 'Function of v'
         self.submit = Button((firstHeight,80), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -859,6 +916,9 @@ class ShowVelocityFromAccelerationBaseMenu(object):
         Text((15, 60),'A:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
         Text((15, 120),'b:').draw(self.window)
+        self.entry0.Text = 'A'
+        self.entry2.Text = 'a'
+        self.entry3.Text = 'b'
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -882,6 +942,9 @@ class ShowDistanceFromVelocityBaseMenu(object):
         Text((15, 60),'V:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
         Text((15, 120),'b:').draw(self.window)
+        self.entry0.Text = 'V'
+        self.entry2.Text = 'a'
+        self.entry3.Text = 'b'
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -902,6 +965,8 @@ class ShowMaxRangeBaseMenu(object):
         self.result.draw(self.window)        
         Text((15, 60),'v:').draw(self.window)
         Text((15, 90),'theta:').draw(self.window)
+        self.entry0.Text = 'v'
+        self.entry2.Text = 'theta'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -922,6 +987,8 @@ class ShowMaxHeightBaseMenu(object):
         self.result.draw(self.window)        
         Text((15, 60),'v:').draw(self.window)
         Text((15, 90),'theta:').draw(self.window)
+        self.entry0.Text = 'v'
+        self.entry2.Text = 'theta'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -942,9 +1009,12 @@ class ShowMotionYVectorsBaseMenu(object):
         self.entry3.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)        
-        Text((25, 60),'v1y:').draw(self.window)
-        Text((25, 90),'a:').draw(self.window)
-        Text((25, 120),'t:').draw(self.window)
+        Text((15, 60),'v1y:').draw(self.window)
+        Text((15, 90),'a:').draw(self.window)
+        Text((15, 120),'t:').draw(self.window)
+        self.entry0.Text = 'Y Vector'
+        self.entry2.Text = 'Acceleration'
+        self.entry3.Text = 'Time'
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -965,9 +1035,12 @@ class ShowDeltaMotionYVectorsBaseMenu(object):
         self.entry3.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)        
-        Text((25, 60),'v1:').draw(self.window)
-        Text((25, 90),'a:').draw(self.window)
-        Text((25, 120),'t:').draw(self.window)
+        Text((15, 60),'v1:').draw(self.window)
+        Text((15, 90),'a:').draw(self.window)
+        Text((15, 120),'t:').draw(self.window)
+        self.entry0.Text = 'V'
+        self.entry2.Text = 'Acceleration'
+        self.entry3.Text = 'Time'
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -988,9 +1061,12 @@ class ShowMotionXVectorsBaseMenu(object):
         self.entry3.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)        
-        Text((25, 60),'v1x:').draw(self.window)
-        Text((25, 90),'a:').draw(self.window)
-        Text((25, 120),'t:').draw(self.window)
+        Text((15, 60),'v1x:').draw(self.window)
+        Text((15, 90),'a:').draw(self.window)
+        Text((15, 120),'t:').draw(self.window)
+        self.entry0.Text = 'X Vector'
+        self.entry2.Text = 'Acceleration'
+        self.entry3.Text = 'Time'
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -1010,7 +1086,9 @@ class ShowDeltaMotionXVectorsBaseMenu(object):
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
         Text((15, 60),'v1:').draw(self.window)
-        Text((25, 90),'t:').draw(self.window)
+        Text((15, 90),'t:').draw(self.window)
+        self.entry0.Text = 'v'
+        self.entry2.Text = 'Time'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -1029,7 +1107,9 @@ class ShowKineticEnergyBaseMenu(object):
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
         Text((15, 60),'v:').draw(self.window)
-        Text((25, 90),'m:').draw(self.window)
+        Text((15, 90),'m:').draw(self.window)
+        self.entry0.Text = 'Velocity'
+        self.entry1.Text = 'Mass'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -1048,7 +1128,9 @@ class ShowGravitationalPotentialEnergyMenu(object):
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
-        Text((25, 90),'h:').draw(self.window)
+        Text((15, 90),'h:').draw(self.window)
+        self.entry0.Text = 'Mass'
+        self.entry1.Text = 'Height'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -1068,7 +1150,9 @@ class ShowSpringPotentialEnergyBaseMenu(object):
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
         Text((15, 60),'k:').draw(self.window)
-        Text((25, 90),'x:').draw(self.window)
+        Text((15, 90),'x:').draw(self.window)
+        self.entry0.Text = 'Spring Constant'
+        self.entry2.Text = 'Distance Stretched'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -1088,6 +1172,8 @@ class ShowCenterOfMass(object):
         self.result.draw(self.window)        
         Text((15, 60),'r:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
+        self.entry0.Text = 'Radius'
+        self.entry1.Text = 'v'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -1107,6 +1193,8 @@ class ShowAccelerationBaseMenu(object):
         self.result.draw(self.window)        
         Text((15, 60),'r:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
+        self.entry0.Text = 'Radius'
+        self.entry1.Text = 'Velocity'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -1123,6 +1211,7 @@ class ShowVerticalCircleVelocityMenu(object):
         self.result = Entry((firstHeight,120), 20)
         self.result.draw(self.window)        
         Text((15, 60),'r:').draw(self.window)
+        self.entry0.Text = 'Radius'
         self.submit = Button((firstHeight,80), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -1142,6 +1231,8 @@ class ShowHorizontalCircleVelocityBaseMenu(object):
         self.result.draw(self.window)        
         Text((15, 60),'mu:').draw(self.window)
         Text((15, 90),'r:').draw(self.window)
+        self.entry0.Text = 'Mu'
+        self.entry1.Text = 'Radius'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -1166,6 +1257,9 @@ class ShowForceMenu(object):
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
         Text((15, 90),'r:').draw(self.window)
+        self.entry0.Text = 'Mass'
+        self.entry1.Text = 'Velocity'
+        self.entry2.Text = 'Radius'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
