@@ -5,16 +5,9 @@ import ForceOther
 x, y, z = symbols('x y z') 
 init_printing(use_unicode=True) 
 firstHeight = 40
- 
-## class BaseMenu(object): 
-##     def __init__(self):          
-##         self.win = Window("Fiziks Mill", 400, 400) 
-##         self.solveEquations = Button((150, 150), "Solve Equation") 
-##         self.solveEquations.draw(self.win) 
-##         #Button Connectors 
-##         self.solveEquations.connect("click", self.showEquationMenu) 
-##     def showEquationMenu(self, o, e): 
-##         equationBaseMenu = EquationBaseMenu() 
+
+## New Velocity With Distance Travelled, Acceleration without distance, acceleration without final velocity do not work
+## Variables in Velocity from Acceleration, Distance from Velocity, Max Range, Max Height, Change in Motion Y/X Vector, Work Power Equation, Keplers Constant, Center of Mass have variables that I didn't recognize
 class EquationBaseMenu(object): 
     def __init__(self):          
         #Equation Base Menu Buttons 
@@ -27,7 +20,7 @@ class EquationBaseMenu(object):
         self.centerOfMass = Button((firstHeight, 170), "Center Of Mass") 
         self.circularMotion = Button((firstHeight, 190), "Circular Motion") 
         
-        self.equationBaseMenu = Window("Base Menu", 200, 300)
+        self.equationBaseMenu = Window("Fiziks Mill", 200, 300)
         self.force.draw(self.equationBaseMenu) 
         self.motion.draw(self.equationBaseMenu) 
         self.momentumButton.draw(self.equationBaseMenu) 
@@ -118,7 +111,6 @@ class ShowMomentumBaseMenu(object):
         self.impulseFirst = Button((firstHeight, 70), "Impulse with Change in Momentum") 
         self.impulseSecond = Button((firstHeight, 90), "Impulse with Force and Change in Time") 
         self.impulseThird = Button((firstHeight, 110), "Impulse with Mass and Change in Velocity") 
-        self.conservationOfMomentum = Button((firstHeight, 130), "Conservation Of Momentum") 
         self.hitAndSeperate = Button((firstHeight, 150), "Hit and Seperate") 
         self.hitAndStick = Button((firstHeight, 170), "Hit and Stick") 
  
@@ -127,7 +119,6 @@ class ShowMomentumBaseMenu(object):
         self.impulseFirst.draw(self.equationMomentumMenu) 
         self.impulseSecond.draw(self.equationMomentumMenu) 
         self.impulseThird.draw(self.equationMomentumMenu) 
-        self.conservationOfMomentum.draw(self.equationMomentumMenu) 
         self.hitAndSeperate.draw(self.equationMomentumMenu) 
         self.hitAndStick.draw(self.equationMomentumMenu) 
          
@@ -135,7 +126,6 @@ class ShowMomentumBaseMenu(object):
         self.impulseFirst.connect("click", self.showImpulseFirstMenu) 
         self.impulseSecond.connect("click", self.showImpulseSecondBaseMenu) 
         self.impulseThird.connect("click", self.showImpulseThirdBaseMenu) 
-        self.conservationOfMomentum.connect("click", self.showConservationOfMomentumBaseMenu) 
         self.hitAndSeperate.connect("click", self.showHitAndSeperateMenu) 
         self.hitAndStick.connect("click", self.showHitAndStickBaseMenu) 
          
@@ -147,8 +137,6 @@ class ShowMomentumBaseMenu(object):
         showImpulseSecondMenu = ShowImpulseSecondMenu() 
     def showImpulseThirdBaseMenu(self, o, e): 
         showImpulseThirdMenu = ShowImpulseThirdMenu() 
-    def showConservationOfMomentumBaseMenu(self, o, e): 
-        conservationOfMomentumBaseMenu = ShowConservationOfMomentumBaseMenu() 
     def showHitAndSeperateMenu(self, o, e): 
         showHitAndSeperateMenu = ShowHitAndSeperateMenu() 
     def showHitAndStickBaseMenu(self, o, e): 
@@ -172,7 +160,7 @@ class ShowMotionBaseMenu(object):
         self.deltaMotionYVectors = Button((firstHeight, 270), "Change in Motion y vectors") 
         self.motionXVectors = Button((firstHeight, 290), "Motion x vectors") 
         self.deltaMotionXVectors = Button((firstHeight, 310), "Change in Motion x vectors") 
-        self.accelerationNoX = Button((firstHeight,330), "Acceleration with out distance") 
+        self.accelerationNoX = Button((firstHeight,330), "Acceleration without distance") 
         self.accelerationNoV2 = Button((firstHeight,350), "Accelerattion with out final velocity") 
  
         self.equationMotionMenu = Window("Solve Motion Equation", 400, 400) 
@@ -217,7 +205,7 @@ class ShowMotionBaseMenu(object):
     def showNewVelocityWithTimeBaseMenu(self, o, e): 
         newVelocityWithTimeBaseMenu = ShowNewVelocityWithTimeBaseMenu() 
     def showNewVelocityWithDistanceTravelledMenu(self, o, e): 
-        newVelocityWithDistanceTravelledEnergyMenu = ShowNewVelocityWithDistanceTravelledEnergyMenu() 
+        newVelocityWithDistanceTravelledEnergyMenu = ShowNewVelocityWithDistanceTravelledMenu() 
     def showVelocityFromDistanceBaseMenu(self, o, e): 
         velocityFromDistanceBaseMenu = ShowVelocityFromDistanceBaseMenu() 
     def showAccelerationFromVelocityMenu(self, o, e): 
@@ -347,7 +335,69 @@ class ShowCircularMotionBaseMenu(object):
         horizontalCircleVelocityBaseMenu = ShowHorizontalCircleVelocityBaseMenu()
     def showForceMenu(self, o, e):
         forceMenu = ShowForceMenu()
-
+class ShowNewVelocityWithDistanceTravelledMenu(object):
+    def __init__(self):         
+        self.window = Window("Solve Equation", 400, 190)
+        self.entry0 = Entry((firstHeight,50), 20)
+        self.entry0.draw(self.window)
+        self.entry1 = Entry((firstHeight,80), 20)
+        self.entry1.draw(self.window)
+        self.result = Entry((firstHeight,150), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'F:').draw(self.window)
+        self.entry0.Text = 'Force'
+        Text((15, 90),'M:').draw(self.window)
+        self.entry1.Text =  'Mass'
+        self.submit = Button((firstHeight,110), "Submit")
+        self.submit.draw(self.window)
+        self.submit.connect("Click", self.callMathFunction)
+    def callMathFunction(self, o, e):
+        f = float(self.entry0.Text)
+        m = float(self.entry1.Text)
+        a = f/m
+        self.result.Text = str(a)
+class ShowAccelerationNoXBaseMenu(object):
+    def __init__(self):         
+        self.window = Window("Solve Equation", 400, 190)
+        self.entry0 = Entry((firstHeight,50), 20)
+        self.entry0.draw(self.window)
+        self.entry1 = Entry((firstHeight,80), 20)
+        self.entry1.draw(self.window)
+        self.result = Entry((firstHeight,150), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'F:').draw(self.window)
+        self.entry0.Text = 'Force'
+        Text((15, 90),'M:').draw(self.window)
+        self.entry1.Text =  'Mass'
+        self.submit = Button((firstHeight,110), "Submit")
+        self.submit.draw(self.window)
+        self.submit.connect("Click", self.callMathFunction)
+    def callMathFunction(self, o, e):
+        f = float(self.entry0.Text)
+        m = float(self.entry1.Text)
+        a = f/m
+        self.result.Text = str(a)
+class ShowAccelerationNoV2BaseMenu(object):
+    def __init__(self):         
+        self.window = Window("Solve Equation", 400, 190)
+        self.entry0 = Entry((firstHeight,50), 20)
+        self.entry0.draw(self.window)
+        self.entry1 = Entry((firstHeight,80), 20)
+        self.entry1.draw(self.window)
+        self.result = Entry((firstHeight,150), 20)
+        self.result.draw(self.window)        
+        Text((15, 60),'F:').draw(self.window)
+        self.entry0.Text = 'Force'
+        Text((15, 90),'M:').draw(self.window)
+        self.entry1.Text =  'Mass'
+        self.submit = Button((firstHeight,110), "Submit")
+        self.submit.draw(self.window)
+        self.submit.connect("Click", self.callMathFunction)
+    def callMathFunction(self, o, e):
+        f = float(self.entry0.Text)
+        m = float(self.entry1.Text)
+        a = f/m
+        self.result.Text = str(a)
 class ShowAccelerationForceBaseMenu(object):
     def __init__(self):         
         self.window = Window("Solve Equation", 400, 190)
@@ -438,8 +488,6 @@ class showPowerBaseMenu(object):
         t = x
         p = diff(w, t)
         self.result.Text = str(p)
-#****************************************************************
-#************This Does Not Work**********************************
 class showCalcWorkBaseMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 250)
@@ -470,7 +518,6 @@ class showCalcWorkBaseMenu(object):
         t = x
         w = integrate(Fn, (x, a, b))
         self.result.Text = str(w)
-#****************************************************************
 class ShowPlanetaryForceMenu(object):
    def __init__(self):         
         self.window = Window("Solve Equation", 400, 220)
@@ -715,27 +762,6 @@ class ShowImpulseThirdMenu(object):
         v = float(self.entry1.Text)
         I = m * (v)
         self.result.Text = str(I)
-#************* Why The Hell Do We Have Conservation Of Momentum????? X = X. *******************************************
-#*******************************************
-#*******************************************
-class ShowConservationOfMomentumBaseMenu(object):
-   def __init__(self):
-        self.window = Window("Solve Equation", 400, 160)
-        self.entry0 = Entry((firstHeight,50), 20)
-        self.entry0.draw(self.window)
-        self.result = Entry((firstHeight,120), 20)
-        self.result.draw(self.window)
-        Text((15, 60),'p2:').draw(self.window)
-        self.entry0.Text = 'Momentum'
-        self.submit = Button((firstHeight,80), "Submit")
-        self.submit.draw(self.window)
-        self.submit.connect("Click", self.callMathFunction)
-   def callMathFunction(self, o, e):
-        p2 = float(self.entry0.Text)
-        p1 = p2
-        self.result.Text = str(p1)
-#*******************************************
-#*******************************************
 class ShowHitAndSeperateMenu(object):
    def __init__(self):
         self.window = Window("Solve Equation", 400, 250)
