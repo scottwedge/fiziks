@@ -347,6 +347,12 @@ class ShowNewVelocityWithDistanceTravelledMenu(object):
         Text((15, 60),'F:').draw(self.window)
         self.entry0.Text = 'Force'
         Text((15, 90),'M:').draw(self.window)
+        #**********************Start Here************************
+        #The text should be whatever the fuck you want it to be
+        #Please note that the formatting might look werid when you run it if the line is to long
+        #I will fix that later.
+        #Note, there are a shit ton of these.
+        # <3 Sam Rory Cluff is fantastic for doing this for me!
         self.instructions = Text((300, 55),'Input your equation with "F" blergh blergh testing testing testing')
         self.instructionsln2 = Text((300, 75),'for force and M for mass')
         self.instructions.fontSize = 12
@@ -355,6 +361,7 @@ class ShowNewVelocityWithDistanceTravelledMenu(object):
         self.instructions.setWidth(30)
         self.instructions.draw(self.window)
         self.instructionsln2.draw(self.window)
+        #**********************************************************
         self.entry1.Text =  'Mass'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
@@ -803,7 +810,14 @@ class ShowMomentumMenu(object):
         Text((15, 90),'v:').draw(self.window)
         self.entry0.Text = 'Mass'
         self.entry1.Text = 'Velocity'
-        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -823,6 +837,14 @@ class ShowImpulseFirstMenu(object):
         self.result.draw(self.window)
         Text((15, 60),'p1:').draw(self.window)
         Text((15, 90),'p2:').draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.entry0.Text = 'Momentum One'
         self.entry1.Text = 'Momentum Two'
         self.submit = Button((firstHeight,110), "Submit")
@@ -842,6 +864,14 @@ class ShowImpulseSecondMenu(object):
         self.entry1.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'f:').draw(self.window)
         Text((15, 90),'delta(t):').draw(self.window)
         self.entry0.Text = 'Force'
@@ -863,6 +893,14 @@ class ShowImpulseThirdMenu(object):
         self.entry1.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'f:').draw(self.window)
         Text((15, 90),'delta(v):').draw(self.window)
         self.entry0.Text = 'Force'
@@ -888,6 +926,14 @@ class ShowHitAndSeperateMenu(object):
         self.entry3.draw(self.window)
         self.result = Entry((firstHeight,210), 20)
         self.result.draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'m1:').draw(self.window)
         Text((15, 90),'m2):').draw(self.window)
         Text((15, 110),'v3:').draw(self.window)
@@ -917,6 +963,14 @@ class ShowHitAndStickBaseMenu(object):
         self.entry2.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'m1:').draw(self.window)
         Text((15, 90),'m2):').draw(self.window)
         Text((15, 110),'v1:').draw(self.window)
@@ -941,6 +995,14 @@ class ShowDistanceTravelledBaseMenu(object):
         self.entry1.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v:').draw(self.window)
         Text((15, 90),'t:').draw(self.window)
         self.entry0.Text = 'Velocity'
@@ -964,6 +1026,14 @@ class ShowDistanceTravelledWithAccelerationMenu(object):
         self.entry2.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v1:').draw(self.window)
         Text((15, 90),'t:').draw(self.window)
         Text((15, 110),'a:').draw(self.window)
@@ -990,6 +1060,14 @@ class ShowNewVelocityWithTimeBaseMenu(object):
         self.entry2.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v1:').draw(self.window)
         Text((15, 90),'t:').draw(self.window)
         Text((15, 110),'a:').draw(self.window)
@@ -1013,6 +1091,14 @@ class ShowVelocityFromDistanceBaseMenu(object):
         self.entry0.draw(self.window)
         self.result = Entry((firstHeight,120), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'x:').draw(self.window)
         self.entry0.Text = 'Fuction Of X'
         self.submit = Button((firstHeight,80), "Submit")
@@ -1030,6 +1116,14 @@ class ShowAccelerationFromVelocityMenu(object):
         self.entry0.draw(self.window)
         self.result = Entry((firstHeight,120), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v:').draw(self.window)
         self.entry0.Text = 'Function of v'
         self.submit = Button((firstHeight,80), "Submit")
@@ -1052,6 +1146,14 @@ class ShowVelocityFromAccelerationBaseMenu(object):
         self.entry3.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'A:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
         Text((15, 120),'b:').draw(self.window)
@@ -1078,6 +1180,14 @@ class ShowDistanceFromVelocityBaseMenu(object):
         self.entry3.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'V:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
         Text((15, 120),'b:').draw(self.window)
@@ -1102,6 +1212,14 @@ class ShowMaxRangeBaseMenu(object):
         self.entry2.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v:').draw(self.window)
         Text((15, 90),'theta:').draw(self.window)
         self.entry0.Text = 'v'
@@ -1124,6 +1242,14 @@ class ShowMaxHeightBaseMenu(object):
         self.entry2.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v:').draw(self.window)
         Text((15, 90),'theta:').draw(self.window)
         self.entry0.Text = 'v'
@@ -1148,6 +1274,14 @@ class ShowMotionYVectorsBaseMenu(object):
         self.entry3.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v1y:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
         Text((15, 120),'t:').draw(self.window)
@@ -1174,6 +1308,14 @@ class ShowDeltaMotionYVectorsBaseMenu(object):
         self.entry3.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v1:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
         Text((15, 120),'t:').draw(self.window)
@@ -1200,6 +1342,14 @@ class ShowMotionXVectorsBaseMenu(object):
         self.entry3.draw(self.window)
         self.result = Entry((firstHeight,180), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v1x:').draw(self.window)
         Text((15, 90),'a:').draw(self.window)
         Text((15, 120),'t:').draw(self.window)
@@ -1224,6 +1374,14 @@ class ShowDeltaMotionXVectorsBaseMenu(object):
         self.entry2.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v1:').draw(self.window)
         Text((15, 90),'t:').draw(self.window)
         self.entry0.Text = 'v'
@@ -1245,6 +1403,14 @@ class ShowKineticEnergyBaseMenu(object):
         self.entry1.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'v:').draw(self.window)
         Text((15, 90),'m:').draw(self.window)
         self.entry0.Text = 'Velocity'
@@ -1266,6 +1432,14 @@ class ShowGravitationalPotentialEnergyMenu(object):
         self.entry1.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)        
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'h:').draw(self.window)
         self.entry0.Text = 'Mass'
@@ -1287,7 +1461,15 @@ class ShowSpringPotentialEnergyBaseMenu(object):
         self.entry2 = Entry((firstHeight,80), 20)
         self.entry2.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
-        self.result.draw(self.window)        
+        self.result.draw(self.window)   
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)     
         Text((15, 60),'k:').draw(self.window)
         Text((15, 90),'x:').draw(self.window)
         self.entry0.Text = 'Spring Constant'
@@ -1309,6 +1491,14 @@ class ShowCenterOfMass(object):
         self.entry1.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)        
         Text((15, 60),'r:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
         self.entry0.Text = 'Radius'
@@ -1330,6 +1520,14 @@ class ShowAccelerationBaseMenu(object):
         self.entry1.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)        
         Text((15, 60),'r:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
         self.entry0.Text = 'Radius'
@@ -1349,6 +1547,14 @@ class ShowVerticalCircleVelocityMenu(object):
         self.entry0.draw(self.window)
         self.result = Entry((firstHeight,120), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)        
         Text((15, 60),'r:').draw(self.window)
         self.entry0.Text = 'Radius'
         self.submit = Button((firstHeight,80), "Submit")
@@ -1368,6 +1574,14 @@ class ShowHorizontalCircleVelocityBaseMenu(object):
         self.entry1.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'mu:').draw(self.window)
         Text((15, 90),'r:').draw(self.window)
         self.entry0.Text = 'Mu'
@@ -1393,6 +1607,14 @@ class ShowForceMenu(object):
         self.entry2.draw(self.window)
         self.result = Entry((firstHeight,150), 20)
         self.result.draw(self.window)        
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         Text((15, 60),'m:').draw(self.window)
         Text((15, 90),'v:').draw(self.window)
         Text((15, 90),'r:').draw(self.window)
