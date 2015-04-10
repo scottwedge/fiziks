@@ -347,6 +347,14 @@ class ShowNewVelocityWithDistanceTravelledMenu(object):
         Text((15, 60),'F:').draw(self.window)
         self.entry0.Text = 'Force'
         Text((15, 90),'M:').draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F" blergh blergh testing testing testing')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.wrap = 'true'
+        self.instructions.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.entry1.Text =  'Mass'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
@@ -368,6 +376,14 @@ class ShowAccelerationNoXBaseMenu(object):
         Text((15, 60),'F:').draw(self.window)
         self.entry0.Text = 'Force'
         Text((15, 90),'M:').draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.entry1.Text =  'Mass'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
@@ -389,6 +405,14 @@ class ShowAccelerationNoV2BaseMenu(object):
         Text((15, 60),'F:').draw(self.window)
         self.entry0.Text = 'Force'
         Text((15, 90),'M:').draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.entry1.Text =  'Mass'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
@@ -410,6 +434,14 @@ class ShowAccelerationForceBaseMenu(object):
         Text((15, 60),'F:').draw(self.window)
         self.entry0.Text = 'Force'
         Text((15, 90),'M:').draw(self.window)
+        self.instructions = Text((300, 55),'Input your equation with "F"')
+        self.instructionsln2 = Text((300, 75),'for force and M for mass')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.entry1.Text =  'Mass'
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
@@ -432,6 +464,14 @@ class ShowmuBaseMenu(object):
         self.entry0.Text = 'Force of Friction'
         Text((15, 90),'Fn:').draw(self.window)
         self.entry1.Text = 'Normal Force'
+        self.instructions = Text((300, 55),'Input your equation with "Ff"')
+        self.instructionsln2 = Text((300, 75),'for force of friction and "Fn" for normal force')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -461,6 +501,14 @@ class Showmu2BaseMenu(object):
         self.entry2.Text = '9.81'
         Text((15, 150),'Theta:').draw(self.window)
         self.entry3.Text = 'Theta'
+        self.instructions = Text((300, 55),'Input your equation with "Ff"')
+        self.instructionsln2 = Text((300, 75),'for force of friction, M for mass, and "Theta" for the angle')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,170), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -479,7 +527,15 @@ class showPowerBaseMenu(object):
         self.result = Entry((firstHeight,120), 20)
         self.result.draw(self.window)        
         Text((15, 60),'w:').draw(self.window)
-        self.entry0.Text = 'w'
+        self.entry0.Text = 'work'
+        self.instructions = Text((300, 55),'Input your equation with "w"')
+        self.instructionsln2 = Text((300, 75),'for work')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,80), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -507,6 +563,14 @@ class showCalcWorkBaseMenu(object):
         self.entry1.Text = 'x'
         self.entry2.Text = 'A'
         self.entry3.Text = 'B'
+        self.instructions = Text((300, 55),'Input your equation with "f"')
+        self.instructionsln2 = Text((300, 75),'for the function evaluating from "a" to "b"')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,170), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -535,6 +599,14 @@ class ShowPlanetaryForceMenu(object):
         self.entry0.Text = 'Mass One'
         self.entry1.Text = 'Mass Two'
         self.entry2.Text = 'Radius'
+        self.instructions = Text((300, 55),'Input your equation with "M1"')
+        self.instructionsln2 = Text((300, 75),'for the first mass and "M2" for the second mass and "r" for the radius')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -558,6 +630,14 @@ class ShowPlanetaryGravityMenu(object):
         Text((15, 90),'r:').draw(self.window)
         self.entry0.Text = 'Mass'
         self.entry1.Text = 'Radius'
+        self.instructions = Text((300, 55),'Input your equation with "m"')
+        self.instructionsln2 = Text((300, 75),'for mass and "r" for radius')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -601,6 +681,14 @@ class ShowNetForceBaseMenu(object):
         Text((15, 90),'a:').draw(self.window)
         self.entry0.Text = 'Mass'
         self.entry1.Text = 'Acceleration'
+        self.instructions = Text((300, 55),'Input your equation with "m"')
+        self.instructionsln2 = Text((300, 75),'for mass and "a" for acceleration')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -626,6 +714,14 @@ class ShowNormalForceMenu(object):
         self.entry0.Text = 'Mass'
         self.entry1.Text = 'Acceleration'
         self.entry2.Text = 'Theta'
+        self.instructions = Text((300, 55),'Input your equation with "m"')
+        self.instructionsln2 = Text((300, 75),'for mass, "a" for acceleration and "theta" for the angle')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,140), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -648,6 +744,14 @@ class ShowAppliedForceBaseMenu(object):
         Text((15, 90),'a:').draw(self.window)
         self.entry0.Text = 'Mass'
         self.entry1.Text = 'Acceleration'
+        self.instructions = Text((300, 55),'Input your equation with "m"')
+        self.instructionsln2 = Text((300, 75),'for mass and "a" for acceleration')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -669,6 +773,14 @@ class ShowFrictionForceMenu(object):
         Text((15, 90),'FN:').draw(self.window)
         self.entry0.Text = 'Mu'
         self.entry1.Text = 'Normal Force'
+        self.instructions = Text((300, 55),'Input your equation with "Mu"')
+        self.instructionsln2 = Text((300, 75),'for coefficient of friction and "FN" for normal force')
+        self.instructions.fontSize = 12
+        self.instructionsln2.fontSize = 12
+        self.instructions.setWidth(30)
+        self.instructionsln2.setWidth(30)
+        self.instructions.draw(self.window)
+        self.instructionsln2.draw(self.window)
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
@@ -691,6 +803,7 @@ class ShowMomentumMenu(object):
         Text((15, 90),'v:').draw(self.window)
         self.entry0.Text = 'Mass'
         self.entry1.Text = 'Velocity'
+        
         self.submit = Button((firstHeight,110), "Submit")
         self.submit.draw(self.window)
         self.submit.connect("Click", self.callMathFunction)
