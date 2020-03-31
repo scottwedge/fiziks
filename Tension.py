@@ -7,7 +7,7 @@
 # v = velocity
 # r = radius
 # ff = force of friction
-from sympy immport *
+from sympy import *
 
 T = m * g 
 T = f
